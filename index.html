@@ -28,37 +28,21 @@ scroll-behavior:smooth
 
 body{
 margin:0;
-background:var(--light);
+background-image:url("Gemini_Generated_Image_178e7x178e7x178e-removebg-preview (2).png");
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+background-attachment:fixed;
 color:var(--text);
 font-family:Inter,Arial,sans-serif;
 }
-
 /* =====================================================
    FONDO GENERAL DE LA PÁGINA
    ===================================================== */
 
-body::before{
-content:"";
-position:fixed;
-inset:0;
-z-index:-2;
 
-background-image:url("fondo.png");
-background-size:cover;
-background-position:center center;
-background-repeat:no-repeat;
-}
 
-/* Capa oscura sobre la imagen */
-body::after{
-content:"";
-position:fixed;
-inset:0;
-z-index:-1;
-
-background:rgba(3,14,29,.72);
-pointer-events:none;
-}
+/* Sin capa oscura */
 
 a{
 text-decoration:none;
@@ -186,10 +170,7 @@ fill:currentColor
    ===================================================== */
 
 .hero{
-background-image:url(Gemini_Generated_Image_178e7x178e7x178e-removebg-preview (2).png);
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
+background:transparent;
 color:#fff;
 overflow:hidden;
 }
