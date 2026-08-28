@@ -1,10 +1,11 @@
-```html
 <!doctype html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MVP Academy | Baseball Academy</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;600;700;800&display=swap');
 
@@ -20,16 +21,58 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+html{
+scroll-behavior:smooth
+}
+
 body{
 margin:0;
 background:var(--light);
 color:var(--text);
-font-family:Inter,Arial,sans-serif
+font-family:Inter,Arial,sans-serif;
 }
 
-a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin:auto}
+/* =====================================================
+   FONDO GENERAL DE LA PÁGINA
+   ===================================================== */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-2;
+
+background-image:url("fondo.png");
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+}
+
+/* Capa oscura sobre la imagen */
+body::after{
+content:"";
+position:fixed;
+inset:0;
+z-index:-1;
+
+background:rgba(3,14,29,.72);
+pointer-events:none;
+}
+
+a{
+text-decoration:none;
+color:inherit
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto
+}
+
+/* =====================================================
+   BARRA SUPERIOR
+   ===================================================== */
 
 .top{
 background:#030d1b;
@@ -46,7 +89,13 @@ gap:10px;
 flex-wrap:wrap
 }
 
-.top a:hover{color:#ff6572}
+.top a:hover{
+color:#ff6572
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
 
 .navbar{
 position:sticky;
@@ -103,7 +152,9 @@ padding:8px 0;
 border-bottom:2px solid transparent
 }
 
-.links a:hover{border-color:var(--red)}
+.links a:hover{
+border-color:var(--red)
+}
 
 .socials{
 display:flex;
@@ -120,7 +171,9 @@ background:#183653;
 color:#fff
 }
 
-.social:hover{background:var(--red)}
+.social:hover{
+background:var(--red)
+}
 
 .social svg{
 width:19px;
@@ -128,10 +181,18 @@ height:19px;
 fill:currentColor
 }
 
+/* =====================================================
+   HERO
+   ===================================================== */
+
 .hero{
 background:
-radial-gradient(circle at 80% 25%,rgba(215,25,46,.3),transparent 25%),
-linear-gradient(120deg,#03172d,#0b3158 70%,#061b35);
+linear-gradient(
+120deg,
+rgba(3,23,45,.88),
+rgba(11,49,88,.70),
+rgba(6,27,53,.88)
+);
 color:#fff;
 overflow:hidden
 }
@@ -144,7 +205,9 @@ align-items:center;
 gap:25px
 }
 
-.hero-copy{padding:55px 0}
+.hero-copy{
+padding:55px 0
+}
 
 .ribbon{
 display:inline-block;
@@ -162,7 +225,9 @@ margin:24px 0 18px;
 letter-spacing:-2px
 }
 
-h1 span{text-shadow:4px 4px 0 var(--red)}
+h1 span{
+text-shadow:4px 4px 0 var(--red)
+}
 
 h1 small{
 display:block;
@@ -219,8 +284,17 @@ filter:drop-shadow(0 15px 20px rgba(0,0,0,.3));
 object-fit:contain
 }
 
-.logo1{width:min(290px,43vw)}
-.logo2{width:min(270px,40vw)}
+.logo1{
+width:min(290px,43vw)
+}
+
+.logo2{
+width:min(270px,40vw)
+}
+
+/* =====================================================
+   INFORMACIÓN
+   ===================================================== */
 
 .info{
 margin-top:-34px;
@@ -245,7 +319,9 @@ padding:20px;
 border-right:1px solid var(--line)
 }
 
-.info-item:last-child{border:0}
+.info-item:last-child{
+border:0
+}
 
 .ico{
 width:44px;
@@ -273,9 +349,17 @@ font-size:14px;
 margin-top:4px
 }
 
-main{padding-bottom:70px}
+/* =====================================================
+   CONTENIDO
+   ===================================================== */
 
-.section{padding-top:72px}
+main{
+padding-bottom:70px
+}
+
+.section{
+padding-top:72px
+}
 
 .head{
 display:flex;
@@ -296,16 +380,21 @@ letter-spacing:1.7px
 h2{
 font:900 45px/.95 'Barlow Condensed';
 text-transform:uppercase;
-color:var(--navy);
-margin:5px 0 0
+color:#fff;
+margin:5px 0 0;
+text-shadow:2px 2px 8px rgba(0,0,0,.5)
 }
 
 .head p{
 max-width:560px;
-color:var(--muted);
+color:#e0e8f1;
 line-height:1.6;
 margin:0
 }
+
+/* =====================================================
+   TARJETAS
+   ===================================================== */
 
 .cards{
 display:grid;
@@ -329,7 +418,9 @@ font:900 21px 'Barlow Condensed';
 text-transform:uppercase
 }
 
-.card-body{padding:21px}
+.card-body{
+padding:21px
+}
 
 .tag{
 display:inline-block;
@@ -358,6 +449,10 @@ line-height:1.5
 font:900 42px 'Barlow Condensed';
 color:var(--red)
 }
+
+/* =====================================================
+   TABLAS
+   ===================================================== */
 
 .tables{
 display:grid;
@@ -389,7 +484,9 @@ padding:15px 18px;
 border-bottom:1px solid var(--line)
 }
 
-.row:last-child{border:0}
+.row:last-child{
+border:0
+}
 
 .row strong{
 font:900 19px 'Barlow Condensed';
@@ -408,8 +505,16 @@ color:var(--red);
 font:900 24px 'Barlow Condensed'
 }
 
+/* =====================================================
+   PANELES OSCUROS
+   ===================================================== */
+
 .dark{
-background:linear-gradient(120deg,var(--navy),var(--navy2));
+background:linear-gradient(
+120deg,
+rgba(6,27,53,.96),
+rgba(12,49,87,.96)
+);
 border:0
 }
 
@@ -421,9 +526,17 @@ background:linear-gradient(100deg,var(--red),#aa1020)
 border-color:rgba(255,255,255,.13)
 }
 
-.dark .row strong{color:#fff}
+.dark .row strong{
+color:#fff
+}
 
-.dark .row span{color:#cad7e5}
+.dark .row span{
+color:#cad7e5
+}
+
+/* =====================================================
+   SHOP
+   ===================================================== */
 
 .shop{
 display:grid;
@@ -442,13 +555,18 @@ border-bottom:1px solid rgba(255,255,255,.13)
 
 .shop-item b{
 font:800 18px 'Barlow Condensed';
-text-transform:uppercase
+text-transform:uppercase;
+color:#fff
 }
 
 .shop-item strong{
 color:#ff5b69;
 font:900 22px 'Barlow Condensed'
 }
+
+/* =====================================================
+   CONTACTO
+   ===================================================== */
 
 .contact{
 display:grid;
@@ -457,13 +575,15 @@ gap:20px
 }
 
 .contact-main{
-background:var(--navy);
+background:rgba(6,27,53,.96);
 color:#fff;
 border-radius:12px;
 padding:32px
 }
 
-.contact-main h2{color:#fff}
+.contact-main h2{
+color:#fff
+}
 
 .contact-main p{
 color:#cedbeb;
@@ -495,7 +615,9 @@ display:block;
 margin-top:5px
 }
 
-.contact-card:hover{border-color:var(--red)}
+.contact-card:hover{
+border-color:var(--red)
+}
 
 .social-row{
 display:flex;
@@ -525,6 +647,10 @@ background:#25d366;
 color:#fff
 }
 
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
 footer{
 background:#030e1d;
 color:#b7c6d8;
@@ -549,20 +675,28 @@ display:flex;
 gap:9px
 }
 
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
 @media(max-width:950px){
 
-.links{display:none}
-
-.menu{display:block}
+.links{
+display:none
+}
 
 .hero-grid{
 grid-template-columns:1fr;
 text-align:center
 }
 
-.hero p{margin:auto}
+.hero p{
+margin:auto
+}
 
-.logo-stage{padding-bottom:45px}
+.logo-stage{
+padding-bottom:45px
+}
 
 .cards,
 .tables,
@@ -579,7 +713,9 @@ justify-content:center;
 text-align:center
 }
 
-.brand b{font-size:21px}
+.brand b{
+font-size:21px
+}
 
 .brand small{
 font-size:8px
@@ -590,15 +726,25 @@ width:45px;
 height:45px
 }
 
-.nav{height:68px}
+.nav{
+height:68px
+}
 
-.hero h1{font-size:67px}
+.hero h1{
+font-size:67px
+}
 
-.logo1{width:45vw}
+.logo1{
+width:45vw
+}
 
-.logo2{width:43vw}
+.logo2{
+width:43vw
+}
 
-.info{margin-top:-20px}
+.info{
+margin-top:-20px
+}
 
 .info-card{
 grid-template-columns:1fr
@@ -609,13 +755,21 @@ border-right:0;
 border-bottom:1px solid var(--line)
 }
 
-.section{padding-top:55px}
+.section{
+padding-top:55px
+}
 
-.head{display:block}
+.head{
+display:block
+}
 
-.head p{margin-top:10px}
+.head p{
+margin-top:10px
+}
 
-h2{font-size:40px}
+h2{
+font-size:40px
+}
 
 .row{
 grid-template-columns:1fr auto
@@ -630,60 +784,113 @@ grid-column:2;
 grid-row:1
 }
 
-.shop{grid-template-columns:1fr}
+.shop{
+grid-template-columns:1fr
+}
 
 }
 </style>
+
 </head>
 
 <body>
 
+<!-- =====================================================
+     BARRA SUPERIOR
+     ===================================================== -->
+
 <div class="top">
+
 <div class="container">
-<span>⚾ CLASES Y PERSONALIZADOS A PARTIR DE LOS 4 AÑOS</span>
+
 <span>
-<a href="tel:+526641132878">664 113 2878</a> ·
-<a href="https://instagram.com/mvpacademy.mx" target="_blank">@mvpacademy.mx</a>
+⚾ CLASES Y PERSONALIZADOS A PARTIR DE LOS 4 AÑOS
 </span>
+
+<span>
+
+<a href="tel:+526641132878">
+664 113 2878
+</a>
+
+·
+
+<a href="https://instagram.com/mvpacademy.mx" target="_blank">
+@mvpacademy.mx
+</a>
+
+</span>
+
 </div>
 </div>
 
+<!-- =====================================================
+     NAVBAR
+     ===================================================== -->
+
 <header class="navbar">
+
 <div class="container nav">
 
 <a class="brand" href="#inicio">
-  <img src="Gemini_Generated_Image_rfkocdrfkocdrfko-removebg-preview.png">
-  <div>
-    <b>MVP BASEBALL ACADEMY</b>
-    <small>SPORTS COMPLEX</small>
-  </div>
+
+<img src="Gemini_Generated_Image_rfkocdrfkocdrfko-removebg-preview.png">
+
+<div>
+
+<b>MVP BASEBALL ACADEMY</b>
+
+<small>SPORTS COMPLEX</small>
+
+</div>
+
 </a>
+
 <nav class="links">
-<a href="#inicio">Inicio</a>
-<a href="#promos">Promociones</a>
-<a href="#precios">Precios</a>
-<a href="#rehab">Rehab</a>
-<a href="#shop">Shop</a>
-<a href="#contacto">Contacto</a>
+
+<a href="#inicio">Inicio</a> <a href="#promos">Promociones</a> <a href="#precios">Precios</a> <a href="#rehab">Rehab</a> <a href="#shop">Shop</a> <a href="#contacto">Contacto</a>
+
 </nav>
 
 <div class="socials">
 
-<a class="social" href="https://instagram.com/mvpacademy.mx" target="_blank" aria-label="Instagram">
+<a
+class="social"
+href="https://instagram.com/mvpacademy.mx"
+target="_blank"
+aria-label="Instagram">
+
 <svg viewBox="0 0 24 24">
+
 <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Z"/>
+
 </svg>
+
 </a>
 
-<a class="social" href="https://wa.me/526641132878" target="_blank" aria-label="WhatsApp">
+<a
+class="social"
+href="https://wa.me/526641132878"
+target="_blank"
+aria-label="WhatsApp">
+
 <svg viewBox="0 0 24 24">
+
 <path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.8L.3 24l6.7-1.7c1.6.9 3.3 1.3 5.1 1.3h.1c6.4 0 11.6-5.2 11.6-11.7 0-3.1-1.2-6.1-3.3-8.4ZM12.1 21.5c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-4 .9 1.1-3.9-.2-.3a9.7 9.7 0 1 1 7.9 4.7Z"/>
+
 </svg>
+
 </a>
 
 </div>
+
 </div>
+
 </header>
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
 <section class="hero" id="inicio">
 
@@ -691,68 +898,144 @@ grid-row:1
 
 <div class="hero-copy">
 
-<div class="ribbon">⚾ MVP SPORTS COMPLEX · TIJUANA</div>
+<div class="ribbon">
+⚾ MVP SPORTS COMPLEX · TIJUANA
+</div>
 
 <h1>
+
 <span>MVP</span><br>
+
 BASEBALL<br>
+
 <small>ACADEMY</small>
+
 </h1>
 
 <p>
-Entrenamiento de béisbol, preparación física, rehabilitación deportiva y equipamiento para desarrollar tu máximo nivel.
+Entrenamiento de béisbol, preparación física,
+rehabilitación deportiva y equipamiento para
+desarrollar tu máximo nivel.
 </p>
 
 <div class="actions">
-<a class="btn red" href="https://wa.me/526641132878" target="_blank">💬 WhatsApp</a>
-<a class="btn outline" href="#precios">Ver precios</a>
+
+<a
+class="btn red"
+href="https://wa.me/526641132878"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+<a
+class="btn outline"
+href="#precios">
+
+Ver precios
+
+</a>
+
 </div>
 
 </div>
 
 <div class="logo-stage">
 
-<img class="logo1" src="assets/mvp-baseball-academy.png" alt="MVP Baseball Academy">
+<img
+class="logo1"
+src="assets/mvp-baseball-academy.png"
+alt="MVP Baseball Academy">
 
-<img class="logo2" src="assets/mvp-sports-complex.png" alt="MVP Sports Complex">
+<img
+class="logo2"
+src="assets/mvp-sports-complex.png"
+alt="MVP Sports Complex">
 
 </div>
 
 </div>
+
 </section>
+
+<!-- =====================================================
+     INFORMACIÓN
+     ===================================================== -->
 
 <div class="container info">
 
 <div class="info-card">
 
 <div class="info-item">
-<div class="ico">☎</div>
-<div>
-<small>Teléfono / WhatsApp</small>
-<b>664 113 2878</b>
+
+<div class="ico">
+☎
 </div>
+
+<div>
+
+<small>
+Teléfono / WhatsApp
+</small>
+
+<b>
+664 113 2878
+</b>
+
+</div>
+
 </div>
 
 <div class="info-item">
-<div class="ico">◎</div>
-<div>
-<small>Instagram / Usuario</small>
-<b>@mvpacademy.mx</b>
+
+<div class="ico">
+◎
 </div>
+
+<div>
+
+<small>
+Instagram / Usuario
+</small>
+
+<b>
+@mvpacademy.mx
+</b>
+
+</div>
+
 </div>
 
 <div class="info-item">
-<div class="ico">⌖</div>
-<div>
-<small>Sucursal 1</small>
-<b>Callejón San Pedro #14057, Col. Guillén</b>
+
+<div class="ico">
+⌖
 </div>
+
+<div>
+
+<small>
+Sucursal 1
+</small>
+
+<b>
+Callejón San Pedro #14057, Col. Guillén
+</b>
+
 </div>
 
 </div>
+
+</div>
+
 </div>
 
 <main>
+
+<!-- =====================================================
+     PROMOCIONES
+     ===================================================== -->
 
 <section class="section" id="promos">
 
@@ -761,12 +1044,20 @@ Entrenamiento de béisbol, preparación física, rehabilitación deportiva y equ
 <div class="head">
 
 <div>
-<div class="label">Ofertas especiales</div>
-<h2>Promociones</h2>
+
+<div class="label">
+Ofertas especiales
+</div>
+
+<h2>
+Promociones
+</h2>
+
 </div>
 
 <p>
-Promociones proporcionadas para agosto y promoción especial por el Torneo Nacional.
+Promociones proporcionadas para agosto
+y promoción especial por el Torneo Nacional.
 </p>
 
 </div>
@@ -781,20 +1072,33 @@ Promociones proporcionadas para agosto y promoción especial por el Torneo Nacio
 
 <div class="card-body">
 
-<span class="tag">Bateo & Pitcheo</span>
+<span class="tag">
+Bateo & Pitcheo
+</span>
 
-<h3>Paquete Personalizado</h3>
-
-<p>4 sesiones personalizadas.</p>
-
-<div class="price">$2,200 MXN</div>
+<h3>
+Paquete Personalizado
+</h3>
 
 <p>
-<b>🎁 Incluye 1 Recovery Deportivo de regalo</b>
+4 sesiones personalizadas.
+</p>
+
+<div class="price">
+$2,200 MXN
+</div>
+
+<p>
+<b>
+🎁 Incluye 1 Recovery Deportivo de regalo
+</b>
+
 (valorando en $800 MXN).
+
 </p>
 
 </div>
+
 </article>
 
 <article class="card">
@@ -805,17 +1109,25 @@ Promociones proporcionadas para agosto y promoción especial por el Torneo Nacio
 
 <div class="card-body">
 
-<span class="tag">Tiempo limitado</span>
+<span class="tag">
+Tiempo limitado
+</span>
 
-<h3>Recovery Deportivo</h3>
+<h3>
+Recovery Deportivo
+</h3>
 
 <p>
-Precio regular <s>$800</s> → precio promocional:
+Precio regular <s>$800</s> →
+precio promocional:
 </p>
 
-<div class="price">$600 MXN</div>
+<div class="price">
+$600 MXN
+</div>
 
 </div>
+
 </article>
 
 <article class="card">
@@ -826,24 +1138,41 @@ Precio regular <s>$800</s> → precio promocional:
 
 <div class="card-body">
 
-<span class="tag">2 días por semana</span>
+<span class="tag">
+2 días por semana
+</span>
 
-<h3>10 sesiones</h3>
-
-<p>Paquete de preparación física.</p>
-
-<div class="price">$2,500 MXN</div>
+<h3>
+10 sesiones
+</h3>
 
 <p>
-<b>🎁 Incluye 1 Recovery Deportivo de regalo.</b>
+Paquete de preparación física.
+</p>
+
+<div class="price">
+$2,500 MXN
+</div>
+
+<p>
+<b>
+🎁 Incluye 1 Recovery Deportivo de regalo.
+</b>
 </p>
 
 </div>
+
 </article>
 
 </div>
+
 </div>
+
 </section>
+
+<!-- =====================================================
+     PRECIOS
+     ===================================================== -->
 
 <section class="section" id="precios">
 
@@ -852,8 +1181,15 @@ Precio regular <s>$800</s> → precio promocional:
 <div class="head">
 
 <div>
-<div class="label">Entrenamiento</div>
-<h2>Membresías y precios</h2>
+
+<div class="label">
+Entrenamiento
+</div>
+
+<h2>
+Membresías y precios
+</h2>
+
 </div>
 
 </div>
@@ -867,27 +1203,54 @@ Membresías y paquetes
 </div>
 
 <div class="row">
-<strong>Membresía 4x4</strong>
+
+<strong>
+Membresía 4x4
+</strong>
+
 <span>
-4 sesiones personalizadas + 4 sesiones de preparación física
+4 sesiones personalizadas + 4 sesiones
+de preparación física
 </span>
-<div class="money">$3,500</div>
+
+<div class="money">
+$3,500
+</div>
+
 </div>
 
 <div class="row">
-<strong>Membresía Básica</strong>
+
+<strong>
+Membresía Básica
+</strong>
+
 <span>
-2 sesiones x semana · 4 semanas · 50% bateo / 50% fildeo
+2 sesiones x semana · 4 semanas ·
+50% bateo / 50% fildeo
 </span>
-<div class="money">$2,500</div>
+
+<div class="money">
+$2,500
+</div>
+
 </div>
 
 <div class="row">
-<strong>Preparación Física</strong>
+
+<strong>
+Preparación Física
+</strong>
+
 <span>
-2 sesiones x semana · 5 semanas + 1 Recovery deportivo
+2 sesiones x semana · 5 semanas +
+1 Recovery deportivo
 </span>
-<div class="money">$2,500</div>
+
+<div class="money">
+$2,500
+</div>
+
 </div>
 
 </div>
@@ -899,42 +1262,81 @@ Sesiones y renta
 </div>
 
 <div class="row">
-<strong>Personalizados</strong>
+
+<strong>
+Personalizados
+</strong>
+
 <span>
-Bateo, pitcheo o catcher · 1 sesión / 4 sesiones
+Bateo, pitcheo o catcher ·
+1 sesión / 4 sesiones
 </span>
-<div class="money">$650 / $2,200</div>
+
+<div class="money">
+$650 / $2,200
+</div>
+
 </div>
 
 <div class="row">
-<strong>Clase por Día</strong>
+
+<strong>
+Clase por Día
+</strong>
+
 <span>
 Preparación física, defensiva u ofensiva
 </span>
-<div class="money">$400</div>
+
+<div class="money">
+$400
+</div>
+
 </div>
 
 <div class="row">
-<strong>Pruebas Físicas</strong>
+
+<strong>
+Pruebas Físicas
+</strong>
+
 <span>
 Análisis de parámetros personales
 </span>
-<div class="money">$600</div>
+
+<div class="money">
+$600
+</div>
+
 </div>
 
 <div class="row">
-<strong>Renta de Jaula</strong>
+
+<strong>
+Renta de Jaula
+</strong>
+
 <span>
 1 hora · 1–3 personas / 4–10 personas
 </span>
-<div class="money">$800 / $1,400</div>
+
+<div class="money">
+$800 / $1,400
 </div>
 
 </div>
 
 </div>
+
 </div>
+
+</div>
+
 </section>
+
+<!-- =====================================================
+     REHAB
+     ===================================================== -->
 
 <section class="section" id="rehab">
 
@@ -943,12 +1345,20 @@ Análisis de parámetros personales
 <div class="head">
 
 <div>
-<div class="label">Recuperación deportiva</div>
-<h2>MVP Rehab Center</h2>
+
+<div class="label">
+Recuperación deportiva
+</div>
+
+<h2>
+MVP Rehab Center
+</h2>
+
 </div>
 
 <p>
-Centro de rehabilitación con fisioterapia deportiva y médico deportivo.
+Centro de rehabilitación con fisioterapia
+deportiva y médico deportivo.
 </p>
 
 </div>
@@ -960,38 +1370,94 @@ Servicios
 </div>
 
 <div class="row">
-<strong>Fisioterapia Deportiva</strong>
-<span>Consulta general</span>
-<div class="money">$800</div>
+
+<strong>
+Fisioterapia Deportiva
+</strong>
+
+<span>
+Consulta general
+</span>
+
+<div class="money">
+$800
+</div>
+
 </div>
 
 <div class="row">
-<strong>Fisioterapia Deportiva</strong>
-<span>Recovery deportivo</span>
-<div class="money">$800</div>
+
+<strong>
+Fisioterapia Deportiva
+</strong>
+
+<span>
+Recovery deportivo
+</span>
+
+<div class="money">
+$800
+</div>
+
 </div>
 
 <div class="row">
-<strong>Fisioterapia Deportiva</strong>
-<span>Suero vitaminado</span>
-<div class="money">$1,800</div>
+
+<strong>
+Fisioterapia Deportiva
+</strong>
+
+<span>
+Suero vitaminado
+</span>
+
+<div class="money">
+$1,800
+</div>
+
 </div>
 
 <div class="row">
-<strong>Médico Deportivo</strong>
-<span>Primera consulta</span>
-<div class="money">$1,200</div>
+
+<strong>
+Médico Deportivo
+</strong>
+
+<span>
+Primera consulta
+</span>
+
+<div class="money">
+$1,200
+</div>
+
 </div>
 
 <div class="row">
-<strong>Médico Deportivo</strong>
-<span>Reconsulta</span>
-<div class="money">$600</div>
+
+<strong>
+Médico Deportivo
+</strong>
+
+<span>
+Reconsulta
+</span>
+
+<div class="money">
+$600
 </div>
 
 </div>
+
 </div>
+
+</div>
+
 </section>
+
+<!-- =====================================================
+     SHOP
+     ===================================================== -->
 
 <section class="section" id="shop">
 
@@ -1000,8 +1466,15 @@ Servicios
 <div class="head">
 
 <div>
-<div class="label">Equipamiento y ropa</div>
-<h2>MVP Shop</h2>
+
+<div class="label">
+Equipamiento y ropa
+</div>
+
+<h2>
+MVP Shop
+</h2>
+
 </div>
 
 </div>
@@ -1015,59 +1488,136 @@ Productos
 <div class="shop">
 
 <div class="shop-item">
-<b>👕 Camiseta</b>
-<strong>$400</strong>
+
+<b>
+👕 Camiseta
+</b>
+
+<strong>
+$400
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>🏏 Bat</b>
-<strong>$1,500</strong>
+
+<b>
+🏏 Bat
+</b>
+
+<strong>
+$1,500
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>🧥 Sudadera</b>
-<strong>$700</strong>
+
+<b>
+🧥 Sudadera
+</b>
+
+<strong>
+$700
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>〰️ Ligas de Resistencia</b>
-<strong>$500</strong>
+
+<b>
+〰️ Ligas de Resistencia
+</b>
+
+<strong>
+$500
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>🧢 Gorra</b>
-<strong>$500</strong>
+
+<b>
+🧢 Gorra
+</b>
+
+<strong>
+$500
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>◼ Tape Deportivo</b>
-<strong>$100</strong>
+
+<b>
+◼ Tape Deportivo
+</b>
+
+<strong>
+$100
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>🧢 Gorro</b>
-<strong>$400</strong>
+
+<b>
+🧢 Gorro
+</b>
+
+<strong>
+$400
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>⚾ Pelota LMB</b>
-<strong>$200</strong>
+
+<b>
+⚾ Pelota LMB
+</b>
+
+<strong>
+$200
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>🧤 Guante</b>
-<strong>$2,000</strong>
+
+<b>
+🧤 Guante
+</b>
+
+<strong>
+$2,000
+</strong>
+
 </div>
 
 <div class="shop-item">
-<b>▬ Cinturón MVP</b>
-<strong>$200</strong>
+
+<b>
+▬ Cinturón MVP
+</b>
+
+<strong>
+$200
+</strong>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
+
 </section>
+
+<!-- =====================================================
+     CONTACTO
+     ===================================================== -->
 
 <section class="section" id="contacto">
 
@@ -1077,19 +1627,27 @@ Productos
 
 <div class="contact-main">
 
-<div class="label" style="color:#ff5968">
+<div
+class="label"
+style="color:#ff5968">
+
 Visítanos
+
 </div>
 
-<h2>Contacto y ubicación</h2>
+<h2>
+Contacto y ubicación
+</h2>
 
 <p>
-<b>Edades:</b> clases y personalizados a partir de los 4 años.
+<b>Edades:</b>
+clases y personalizados a partir de los 4 años.
 </p>
 
 <p>
 <b>Sucursal 1:</b>
-Callejón San Pedro #14057, Col. Guillén,
+Callejón San Pedro #14057,
+Col. Guillén,
 C.P. 22106, Tijuana, B.C.
 </p>
 
@@ -1102,75 +1660,122 @@ sucursal debe consultarse directamente.
 
 <div class="social-row">
 
-<a class="social-btn whatsapp"
+<a
+class="social-btn whatsapp"
 href="https://wa.me/526641132878"
 target="_blank">
+
 WhatsApp
+
 </a>
 
-<a class="social-btn"
+<a
+class="social-btn"
 href="https://instagram.com/mvpacademy.mx"
 target="_blank">
+
 Instagram
+
 </a>
 
 </div>
+
 </div>
 
 <div class="contact-cards">
 
-<a class="contact-card" href="tel:+526641132878">
-<small>Teléfono / WhatsApp</small>
-<b>664 113 2878</b>
+<a
+class="contact-card"
+href="tel:+526641132878">
+
+<small>
+Teléfono / WhatsApp
+</small>
+
+<b>
+664 113 2878
+</b>
+
 </a>
 
-<a class="contact-card"
+<a
+class="contact-card"
 href="https://instagram.com/mvpacademy.mx"
 target="_blank">
-<small>Instagram / Usuario</small>
-<b>@mvpacademy.mx</b>
+
+<small>
+Instagram / Usuario
+</small>
+
+<b>
+@mvpacademy.mx
+</b>
+
 </a>
 
 <div class="contact-card">
-<small>Ubicación principal</small>
+
+<small>
+Ubicación principal
+</small>
+
 <b>
 Callejón San Pedro #14057,
 Col. Guillén, C.P. 22106,
 Tijuana, B.C.
 </b>
+
+</div>
+
 </div>
 
 </div>
 
 </div>
-</div>
+
 </section>
 
 </main>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
 <footer>
 
 <div class="container footer">
 
 <div>
-<b>MVP BASEBALL ACADEMY</b>
+
+<b>
+MVP BASEBALL ACADEMY
+</b>
+
 <div>
-Más que un entrenamiento, formamos campeones.
+Más que un entrenamiento,
+formamos campeones.
 </div>
+
 </div>
 
 <div class="footer-social">
 
-<a class="social"
+<a
+class="social"
 href="https://instagram.com/mvpacademy.mx"
 target="_blank">
+
 IG
+
 </a>
 
-<a class="social"
+<a
+class="social"
 href="https://wa.me/526641132878"
 target="_blank">
+
 WA
+
 </a>
 
 </div>
@@ -1181,4 +1786,3 @@ WA
 
 </body>
 </html>
-```
