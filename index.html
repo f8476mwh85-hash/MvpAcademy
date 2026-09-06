@@ -481,31 +481,63 @@ color:#cad7e5
 }
 
 /* =====================================================
-   SHOP
+   SHOP (TARJETAS CON IMÁGENES)
    ===================================================== */
 
-.shop{
+.shop-grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-padding:5px 20px 18px;
-gap:0 30px
+grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+gap:20px;
+padding:20px
 }
 
-.shop-item{
+.shop-card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.12);
+border-radius:10px;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+transition:transform .2s ease, border-color .2s ease
+}
+
+.shop-card:hover{
+transform:translateY(-4px);
+border-color:var(--red)
+}
+
+.shop-img-wrapper{
+width:100%;
+height:180px;
+background:#041427;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+position:relative
+}
+
+.shop-img-wrapper img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.shop-details{
+padding:14px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 0;
-border-bottom:1px solid rgba(255,255,255,.13)
+margin-top:auto
 }
 
-.shop-item b{
+.shop-details b{
 font:800 18px 'Barlow Condensed';
 text-transform:uppercase;
 color:#fff
 }
 
-.shop-item strong{
+.shop-details strong{
 color:#ff5b69;
 font:900 22px 'Barlow Condensed'
 }
@@ -715,8 +747,14 @@ grid-column:2;
 grid-row:1
 }
 
-.shop{
-grid-template-columns:1fr
+.shop-grid{
+grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+gap:12px;
+padding:12px
+}
+
+.shop-img-wrapper{
+height:130px
 }
 
 }
@@ -967,43 +1005,98 @@ grid-template-columns:1fr
 
       <div class="panel dark">
         <div class="panel-title">Productos</div>
-        <div class="shop">
-          <div class="shop-item">
-            <b>👕 Camiseta</b>
-            <strong>$400</strong>
+        <div class="shop-grid">
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="camiseta.jpg" alt="Camiseta MVP">
+            </div>
+            <div class="shop-details">
+              <b>Camiseta</b>
+              <strong>$400</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>🏏 Bat</b>
-            <strong>$1,500</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="bat.jpg" alt="Bat MVP">
+            </div>
+            <div class="shop-details">
+              <b>Bat</b>
+              <strong>$1,500</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>🧥 Sudadera</b>
-            <strong>$700</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="sudadera.jpg" alt="Sudadera MVP">
+            </div>
+            <div class="shop-details">
+              <b>Sudadera</b>
+              <strong>$700</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>〰️ Ligas de Resistencia</b>
-            <strong>$500</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="ligas.jpg" alt="Ligas de Resistencia">
+            </div>
+            <div class="shop-details">
+              <b>Ligas de Resistencia</b>
+              <strong>$500</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>🧢 Gorra</b>
-            <strong>$500</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="gorra.jpg" alt="Gorra MVP">
+            </div>
+            <div class="shop-details">
+              <b>Gorra</b>
+              <strong>$500</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>🧢 Gorro</b>
-            <strong>$400</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="gorro.jpg" alt="Gorro MVP">
+            </div>
+            <div class="shop-details">
+              <b>Gorro</b>
+              <strong>$400</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>🧤 Guante</b>
-            <strong>$2,000</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="guante.jpg" alt="Guante MVP">
+            </div>
+            <div class="shop-details">
+              <b>Guante</b>
+              <strong>$2,000</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>🥊 Guanteletas</b>
-            <strong>—</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="guanteletas.jpg" alt="Guanteletas MVP">
+            </div>
+            <div class="shop-details">
+              <b>Guanteletas</b>
+              <strong>$500</strong>
+            </div>
           </div>
-          <div class="shop-item">
-            <b>🛷 Deslizadores</b>
-            <strong>—</strong>
+
+          <div class="shop-card">
+            <div class="shop-img-wrapper">
+              <img src="deslizadores.jpg" alt="Deslizadores MVP">
+            </div>
+            <div class="shop-details">
+              <b>Deslizadores</b>
+              <strong>$600</strong>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
