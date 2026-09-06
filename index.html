@@ -83,10 +83,17 @@ gap:16px
 .brand{
 display:flex;
 align-items:center;
+gap:12px;
 margin-right:auto;
 color:#fff;
 font:900 24px 'Barlow Condensed';
 letter-spacing:1px;
+}
+
+.brand img{
+height:50px;
+width:auto;
+object-fit:contain
 }
 
 .links{
@@ -141,13 +148,27 @@ overflow:hidden;
 .hero-grid{
 min-height:560px;
 display:grid;
-grid-template-columns:1fr;
+grid-template-columns:1fr 1fr;
 align-items:center;
-gap:25px
+gap:40px
 }
 
 .hero-copy{
 padding:55px 0
+}
+
+.hero-image-container{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px
+}
+
+.hero-image-container img{
+max-width:100%;
+height:auto;
+max-height:450px;
+object-fit:contain
 }
 
 .ribbon{
@@ -728,6 +749,7 @@ h2{font-size:40px}
 <header class="navbar">
   <div class="container nav">
     <a class="brand" href="#inicio">
+      <img src="Gemini_Generated_Image_rfkocdrfkocdrfko-removebg-preview.png" alt="MVP Logo">
       MVP ACADEMY
     </a>
 
@@ -771,6 +793,11 @@ h2{font-size:40px}
         <a class="btn red" href="https://wa.me/526641132878" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
         <a class="btn outline" href="#precios">Ver precios</a>
       </div>
+    </div>
+    
+    <!-- Imagen colocada en el espacio de la derecha del banner hero -->
+    <div class="hero-image-container">
+      <img src="mvp_image-removebg-preview (1).png" alt="MVP Logo Ilustración">
     </div>
   </div>
 </section>
