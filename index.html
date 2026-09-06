@@ -481,63 +481,52 @@ color:#cad7e5
 }
 
 /* =====================================================
-   SHOP (TARJETAS CON IMÁGENES)
+   SHOP (CON MINIATURAS DEL TAMAÑO DE EMOJIS)
    ===================================================== */
 
-.shop-grid{
+.shop{
 display:grid;
-grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
-gap:20px;
-padding:20px
+grid-template-columns:repeat(2,1fr);
+padding:5px 20px 18px;
+gap:0 30px
 }
 
-.shop-card{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.12);
-border-radius:10px;
-overflow:hidden;
-display:flex;
-flex-direction:column;
-transition:transform .2s ease, border-color .2s ease
-}
-
-.shop-card:hover{
-transform:translateY(-4px);
-border-color:var(--red)
-}
-
-.shop-img-wrapper{
-width:100%;
-height:180px;
-background:#041427;
-display:flex;
-align-items:center;
-justify-content:center;
-overflow:hidden;
-position:relative
-}
-
-.shop-img-wrapper img{
-width:100%;
-height:100%;
-object-fit:cover
-}
-
-.shop-details{
-padding:14px;
+.shop-item{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-top:auto
+padding:14px 10px;
+border-bottom:1px solid rgba(255,255,255,.13);
+border-radius:6px;
+transition:background-color .2s ease, padding-left .2s ease;
+cursor:pointer
 }
 
-.shop-details b{
+.shop-item:hover{
+background:rgba(255,255,255,.06);
+padding-left:16px
+}
+
+.shop-item b{
 font:800 18px 'Barlow Condensed';
 text-transform:uppercase;
-color:#fff
+color:#fff;
+display:flex;
+align-items:center;
+gap:8px
 }
 
-.shop-details strong{
+/* Estilo para que la imagen sustituya exactamente la escala y alineación de un emoji */
+.shop-item b img{
+width:1.2em;
+height:1.2em;
+object-fit:cover;
+border-radius:3px;
+vertical-align:middle;
+flex-shrink:0
+}
+
+.shop-item strong{
 color:#ff5b69;
 font:900 22px 'Barlow Condensed'
 }
@@ -747,14 +736,8 @@ grid-column:2;
 grid-row:1
 }
 
-.shop-grid{
-grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
-gap:12px;
-padding:12px
-}
-
-.shop-img-wrapper{
-height:130px
+.shop{
+grid-template-columns:1fr
 }
 
 }
@@ -1005,97 +988,52 @@ height:130px
 
       <div class="panel dark">
         <div class="panel-title">Productos</div>
-        <div class="shop-grid">
+        <div class="shop">
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="camiseta negra de mvp.jpg" alt="Camiseta MVP Negra">
-            </div>
-            <div class="shop-details">
-              <b>Camiseta</b>
-              <strong>$400</strong>
-            </div>
-          </div>
+          <a href="camiseta negra de mvp.jpg" target="_blank" class="shop-item">
+            <b><img src="camiseta negra de mvp.jpg" alt="Camiseta"> Camiseta</b>
+            <strong>$400</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="bat.jpg" alt="Bat MVP">
-            </div>
-            <div class="shop-details">
-              <b>Bat</b>
-              <strong>$1,500</strong>
-            </div>
-          </div>
+          <a href="bat.jpg" target="_blank" class="shop-item">
+            <b><img src="bat.jpg" alt="Bat"> Bat</b>
+            <strong>$1,500</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="sudadera.jpg" alt="Sudadera MVP">
-            </div>
-            <div class="shop-details">
-              <b>Sudadera</b>
-              <strong>$700</strong>
-            </div>
-          </div>
+          <a href="sudadera.jpg" target="_blank" class="shop-item">
+            <b><img src="sudadera.jpg" alt="Sudadera"> Sudadera</b>
+            <strong>$700</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="ligas.jpg" alt="Ligas de Resistencia">
-            </div>
-            <div class="shop-details">
-              <b>Ligas de Resistencia</b>
-              <strong>$500</strong>
-            </div>
-          </div>
+          <a href="ligas.jpg" target="_blank" class="shop-item">
+            <b><img src="ligas.jpg" alt="Ligas"> Ligas de Resistencia</b>
+            <strong>$500</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="gorra.jpg" alt="Gorra MVP">
-            </div>
-            <div class="shop-details">
-              <b>Gorra</b>
-              <strong>$500</strong>
-            </div>
-          </div>
+          <a href="gorra.jpg" target="_blank" class="shop-item">
+            <b><img src="gorra.jpg" alt="Gorra"> Gorra</b>
+            <strong>$500</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="gorro.jpg" alt="Gorro MVP">
-            </div>
-            <div class="shop-details">
-              <b>Gorro</b>
-              <strong>$400</strong>
-            </div>
-          </div>
+          <a href="gorro.jpg" target="_blank" class="shop-item">
+            <b><img src="gorro.jpg" alt="Gorro"> Gorro</b>
+            <strong>$400</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="guante.jpg" alt="Guante MVP">
-            </div>
-            <div class="shop-details">
-              <b>Guante</b>
-              <strong>$2,000</strong>
-            </div>
-          </div>
+          <a href="guante.jpg" target="_blank" class="shop-item">
+            <b><img src="guante.jpg" alt="Guante"> Guante</b>
+            <strong>$2,000</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="guanteletas.jpg" alt="Guanteletas MVP">
-            </div>
-            <div class="shop-details">
-              <b>Guanteletas</b>
-              <strong>$500</strong>
-            </div>
-          </div>
+          <a href="guanteletas.jpg" target="_blank" class="shop-item">
+            <b><img src="guanteletas.jpg" alt="Guanteletas"> Guanteletas</b>
+            <strong>$500</strong>
+          </a>
 
-          <div class="shop-card">
-            <div class="shop-img-wrapper">
-              <img src="deslizadores.jpg" alt="Deslizadores MVP">
-            </div>
-            <div class="shop-details">
-              <b>Deslizadores</b>
-              <strong>$600</strong>
-            </div>
-          </div>
+          <a href="deslizadores.jpg" target="_blank" class="shop-item">
+            <b><img src="deslizadores.jpg" alt="Deslizadores"> Deslizadores</b>
+            <strong>$600</strong>
+          </a>
 
         </div>
       </div>
