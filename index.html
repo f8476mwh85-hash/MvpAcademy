@@ -43,10 +43,7 @@ width:min(1180px,92%);
 margin:auto
 }
 
-/* =====================================================
-   BARRA SUPERIOR
-   ===================================================== */
-
+/* BARRA SUPERIOR */
 .top{
 background:#030d1b;
 color:#fff;
@@ -66,10 +63,7 @@ flex-wrap:wrap
 color:#ff6572
 }
 
-/* =====================================================
-   NAVBAR
-   ===================================================== */
-
+/* NAVBAR */
 .navbar{
 position:sticky;
 top:0;
@@ -90,13 +84,9 @@ gap:16px
 display:flex;
 align-items:center;
 margin-right:auto;
-color:#fff
-}
-
-.brand img{
-height:55px;
-width:auto;
-object-fit:contain
+color:#fff;
+font:900 24px 'Barlow Condensed';
+letter-spacing:1px;
 }
 
 .links{
@@ -141,10 +131,7 @@ height:19px;
 fill:currentColor
 }
 
-/* =====================================================
-   HERO
-   ===================================================== */
-
+/* HERO */
 .hero{
 background:transparent;
 color:#fff;
@@ -154,7 +141,7 @@ overflow:hidden;
 .hero-grid{
 min-height:560px;
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr;
 align-items:center;
 gap:25px
 }
@@ -226,19 +213,7 @@ background:#fff;
 color:var(--navy)
 }
 
-.hero-logo-bg {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100%;
-min-height: 400px;
-background: url("mvp_image-removebg-preview.png") center center / contain no-repeat;
-}
-
-/* =====================================================
-   INFORMACIÓN
-   ===================================================== */
-
+/* INFORMACIÓN */
 .info{
 margin-top:-34px;
 position:relative;
@@ -293,10 +268,7 @@ font-size:14px;
 margin-top:4px
 }
 
-/* =====================================================
-   CONTENIDO
-   ===================================================== */
-
+/* CONTENIDO */
 main{
 padding-bottom:70px
 }
@@ -336,10 +308,7 @@ line-height:1.6;
 margin:0
 }
 
-/* =====================================================
-   TARJETAS
-   ===================================================== */
-
+/* TARJETAS */
 .cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -395,10 +364,7 @@ font:900 42px 'Barlow Condensed';
 color:var(--red)
 }
 
-/* =====================================================
-   TABLAS
-   ===================================================== */
-
+/* TABLAS */
 .tables{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -451,10 +417,7 @@ color:var(--red);
 font:900 24px 'Barlow Condensed'
 }
 
-/* =====================================================
-   PANELES OSCUROS
-   ===================================================== */
-
+/* PANELES OSCUROS */
 .dark{
 background:linear-gradient(
 120deg,
@@ -480,10 +443,7 @@ color:#fff
 color:#cad7e5
 }
 
-/* =====================================================
-   SHOP (CON MINIATURAS DEL TAMAÑO DE EMOJIS)
-   ===================================================== */
-
+/* SHOP */
 .shop{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -513,16 +473,15 @@ text-transform:uppercase;
 color:#fff;
 display:flex;
 align-items:center;
-gap:8px
+gap:10px
 }
 
-/* Estilo para que la imagen sustituya exactamente la escala y alineación de un emoji */
 .shop-item b img{
-width:1.2em;
-height:1.2em;
+width:32px;
+height:32px;
 object-fit:cover;
-border-radius:3px;
-vertical-align:middle;
+border-radius:4px;
+display:inline-block;
 flex-shrink:0
 }
 
@@ -531,10 +490,97 @@ color:#ff5b69;
 font:900 22px 'Barlow Condensed'
 }
 
-/* =====================================================
-   CONTACTO
-   ===================================================== */
+/* MODAL / GALERÍA */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
 
+.modal-content {
+  background: #061b35;
+  border: 1px solid #24405e;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 500px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font: 900 28px 'Barlow Condensed';
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #d7192e;
+}
+
+.modal-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.nav-btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  user-select: none;
+}
+
+.nav-btn:hover {
+  background: #d7192e;
+}
+
+.prev-btn { left: 5px; }
+.next-btn { right: 5px; }
+
+.modal-counter {
+  color: #cad7e5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* CONTACTO */
 .contact{
 display:grid;
 grid-template-columns:1.1fr .9fr;
@@ -615,10 +661,7 @@ background:#25d366;
 color:#fff
 }
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
+/* FOOTER */
 footer{
 background:#030e1d;
 color:#b7c6d8;
@@ -643,103 +686,29 @@ display:flex;
 gap:9px
 }
 
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
-
+/* RESPONSIVE */
 @media(max-width:950px){
-
-.links{
-display:none
-}
-
-.hero-grid{
-grid-template-columns:1fr;
-text-align:center
-}
-
-.hero p{
-margin:auto
-}
-
-.hero-logo-bg{
-min-height:280px;
-margin-bottom:40px
-}
-
-.cards,
-.tables,
-.contact{
-grid-template-columns:1fr
-}
-
+.links{display:none}
+.hero-grid{grid-template-columns:1fr;text-align:center}
+.hero p{margin:auto}
+.cards,.tables,.contact{grid-template-columns:1fr}
 }
 
 @media(max-width:650px){
-
-.top .container{
-justify-content:center;
-text-align:center
-}
-
-.brand img{
-height:42px
-}
-
-.nav{
-height:68px
-}
-
-.hero h1{
-font-size:67px
-}
-
-.info{
-margin-top:-20px
-}
-
-.info-card{
-grid-template-columns:1fr
-}
-
-.info-item{
-border-right:0;
-border-bottom:1px solid var(--line)
-}
-
-.section{
-padding-top:55px
-}
-
-.head{
-display:block
-}
-
-.head p{
-margin-top:10px
-}
-
-h2{
-font-size:40px
-}
-
-.row{
-grid-template-columns:1fr auto
-}
-
-.row span{
-grid-column:1/-1
-}
-
-.row .money{
-grid-column:2;
-grid-row:1
-}
-
-.shop{
-grid-template-columns:1fr
-}
-
+.top .container{justify-content:center;text-align:center}
+.nav{height:68px}
+.hero h1{font-size:67px}
+.info{margin-top:-20px}
+.info-card{grid-template-columns:1fr}
+.info-item{border-right:0;border-bottom:1px solid var(--line)}
+.section{padding-top:55px}
+.head{display:block}
+.head p{margin-top:10px}
+h2{font-size:40px}
+.row{grid-template-columns:1fr auto}
+.row span{grid-column:1/-1}
+.row .money{grid-column:2;grid-row:1}
+.shop{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -759,7 +728,7 @@ grid-template-columns:1fr
 <header class="navbar">
   <div class="container nav">
     <a class="brand" href="#inicio">
-      <img src="Gemini_Generated_Image_rfkocdrfkocdrfko-removebg-preview.png" alt="MVP Baseball Academy Sports Complex">
+      MVP ACADEMY
     </a>
 
     <nav class="links">
@@ -803,7 +772,6 @@ grid-template-columns:1fr
         <a class="btn outline" href="#precios">Ver precios</a>
       </div>
     </div>
-    <div class="hero-logo-bg"></div>
   </div>
 </section>
 
@@ -990,49 +958,54 @@ grid-template-columns:1fr
         <div class="panel-title">Productos</div>
         <div class="shop">
 
-          <a href="camiseta negra de mvp.jpg" target="_blank" class="shop-item">
+          <a href="#" class="shop-item" onclick="openGallery('Camiseta', ['camiseta negra de mvp.jpg', 'camiseta roja de mvp.jpg']); return false;">
             <b><img src="camiseta negra de mvp.jpg" alt="Camiseta"> Camiseta</b>
             <strong>$400</strong>
           </a>
 
-          <a href="bat.jpg" target="_blank" class="shop-item">
-            <b><img src="bat.jpg" alt="Bat"> Bat</b>
+          <a href="#" class="shop-item" onclick="openGallery('Bat', ['bat mvp amarillo.jpg', 'bat mvp azul.jpg', 'bat mvp color madera normal con cafe.jpg', 'bat mvp madera normal.jpg', 'bat mvp negro.jpg', 'bat mvp rojo con negro diferente modelo.jpg', 'bat mvp rojo con negro en diferente pose.jpg', 'bat mvp rojo con negro.jpg', 'bat mvp rosa con azul pose diferente.jpg', 'bat mvp rosa con azul.jpg']); return false;">
+            <b><img src="bat mvp amarillo.jpg" alt="Bat"> Bat</b>
             <strong>$1,500</strong>
           </a>
 
-          <a href="sudadera.jpg" target="_blank" class="shop-item">
-            <b><img src="sudadera.jpg" alt="Sudadera"> Sudadera</b>
+          <a href="#" class="shop-item" onclick="openGallery('Sudadera', ['sudadera de mvp.jpg']); return false;">
+            <b><img src="sudadera de mvp.jpg" alt="Sudadera"> Sudadera</b>
             <strong>$700</strong>
           </a>
 
-          <a href="ligas.jpg" target="_blank" class="shop-item">
+          <a href="#" class="shop-item" onclick="openGallery('Ligas de Resistencia', ['ligas.jpg']); return false;">
             <b><img src="ligas.jpg" alt="Ligas"> Ligas de Resistencia</b>
             <strong>$500</strong>
           </a>
 
-          <a href="gorra.jpg" target="_blank" class="shop-item">
-            <b><img src="gorra.jpg" alt="Gorra"> Gorra</b>
+          <a href="#" class="shop-item" onclick="openGallery('Gorra', ['gorra de mvp.jpg', 'gorra de mvp 2.jpg']); return false;">
+            <b><img src="gorra de mvp.jpg" alt="Gorra"> Gorra</b>
             <strong>$500</strong>
           </a>
 
-          <a href="gorro.jpg" target="_blank" class="shop-item">
-            <b><img src="gorro.jpg" alt="Gorro"> Gorro</b>
+          <a href="#" class="shop-item" onclick="openGallery('Gorro', ['gorro de mvp.jpg']); return false;">
+            <b><img src="gorro de mvp.jpg" alt="Gorro"> Gorro</b>
             <strong>$400</strong>
           </a>
 
-          <a href="guante.jpg" target="_blank" class="shop-item">
-            <b><img src="guante.jpg" alt="Guante"> Guante</b>
+          <a href="#" class="shop-item" onclick="openGallery('Guante', ['guante de mvp negro con color piel.jpg', 'guante de mvp negro.jpg', 'guante de mvp negroo.jpg', 'guante de mvp negrooo.jpg', 'guante de mvp torta foto 2.jpg', 'guante de mvp torta.jpg']); return false;">
+            <b><img src="guante de mvp negro.jpg" alt="Guante"> Guante</b>
             <strong>$2,000</strong>
           </a>
 
-          <a href="guanteletas.jpg" target="_blank" class="shop-item">
-            <b><img src="guanteletas.jpg" alt="Guanteletas"> Guanteletas</b>
+          <a href="#" class="shop-item" onclick="openGallery('Guanteletas', ['guanteletas mvp azul muy oscuro.jpg', 'guanteletas mvp blancas.jpg', 'guanteletas mvp blanco con rojo y azul oscuro.jpg', 'guanteletas mvp negras con amarillo.jpg', 'guanteletas mvp negras.jpg', 'guanteletas mvp negro con blanco.jpg', 'guanteletas mvp rojo.jpg']); return false;">
+            <b><img src="guanteletas mvp azul muy oscuro.jpg" alt="Guanteletas"> Guanteletas</b>
             <strong>$500</strong>
           </a>
 
-          <a href="deslizadores.jpg" target="_blank" class="shop-item">
-            <b><img src="deslizadores.jpg" alt="Deslizadores"> Deslizadores</b>
+          <a href="#" class="shop-item" onclick="openGallery('Deslizadores', ['deslisadores mvp azul con rosa.jpg', 'deslisadores mvp blanca.jpg', 'deslisadores mvp de mario y luigi.jpg']); return false;">
+            <b><img src="deslisadores mvp azul con rosa.jpg" alt="Deslizadores"> Deslizadores</b>
             <strong>$600</strong>
+          </a>
+
+          <a href="#" class="shop-item" onclick="openGallery('Lentes MVP', ['lentes mvp  blanco.jpg', 'lentes mvp  naranja.jpg', 'lentes mvp  negro no tan negro.jpg', 'lentes mvp azul.jpg', 'lentes mvp negro completo.jpg', 'lentes mvp verde.jpg']); return false;">
+            <b><img src="lentes mvp  blanco.jpg" alt="Lentes"> Lentes</b>
+            <strong>$500</strong>
           </a>
 
         </div>
@@ -1075,6 +1048,20 @@ grid-template-columns:1fr
   </section>
 </main>
 
+<!-- Modal / Visor de Galería -->
+<div id="gallery-modal" class="modal" onclick="closeGallery(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closeGallery()">&times;</span>
+    <h3 id="modal-title"></h3>
+    <div class="modal-body">
+      <button class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</button>
+      <img id="modal-img" src="" alt="Producto MVP">
+      <button class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</button>
+    </div>
+    <div id="modal-counter" class="modal-counter"></div>
+  </div>
+</div>
+
 <footer>
   <div class="container footer">
     <div>
@@ -1088,6 +1075,52 @@ grid-template-columns:1fr
     </div>
   </div>
 </footer>
+
+<script>
+let currentImages = [];
+let currentIndex = 0;
+
+function openGallery(title, images) {
+  currentImages = images;
+  currentIndex = 0;
+  document.getElementById('modal-title').innerText = title;
+  updateModalImage();
+  document.getElementById('gallery-modal').style.display = 'flex';
+}
+
+function closeGallery() {
+  document.getElementById('gallery-modal').style.display = 'none';
+}
+
+function changeImage(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) {
+    currentIndex = currentImages.length - 1;
+  } else if (currentIndex >= currentImages.length) {
+    currentIndex = 0;
+  }
+  updateModalImage();
+}
+
+function updateModalImage() {
+  const imgElement = document.getElementById('modal-img');
+  const counterElement = document.getElementById('modal-counter');
+  
+  imgElement.src = currentImages[currentIndex];
+  counterElement.innerText = `${currentIndex + 1} de ${currentImages.length}`;
+
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+
+  if (currentImages.length <= 1) {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  } else {
+    prevBtn.style.display = 'block';
+    nextBtn.style.display = 'block';
+  }
+}
+</script>
 
 </body>
 </html>
