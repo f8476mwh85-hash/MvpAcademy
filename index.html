@@ -495,8 +495,25 @@ gap:0 30px
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:14px 0;
+gap:15px;
+padding:16px 0;
 border-bottom:1px solid rgba(255,255,255,.13)
+}
+
+.shop-item img{
+width:90px;
+height:90px;
+object-fit:contain;
+border-radius:10px;
+background:#fff;
+flex:0 0 90px;
+}
+
+.shop-item-info{
+display:flex;
+align-items:center;
+gap:15px;
+flex:1
 }
 
 .shop-item b{
@@ -968,10 +985,41 @@ grid-template-columns:1fr
       <div class="panel dark">
         <div class="panel-title">Productos</div>
         <div class="shop">
-          <div class="shop-item">
-            <b>👕 Camiseta</b>
-            <strong>$400</strong>
-          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="camiseta.png" alt="Camiseta"><b>Camiseta</b></div>
+            <strong>$400</strong>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="bat.png" alt="Bat"><b>Bat</b></div>
+            <strong>$1,500</strong>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="sudadera.png" alt="Sudadera"><b>Sudadera</b></div>
+            <strong>$700</strong>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="ligas.png" alt="Ligas de Resistencia"><b>Ligas de Resistencia</b></div>
+            <strong>$500</strong>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="gorra.png" alt="Gorra"><b>Gorra</b></div>
+            <strong>$500</strong>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="gorro.png" alt="Gorro"><b>Gorro</b></div>
+            <strong>$400</strong>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="guante.png" alt="Guante"><b>Guante</b></div>
+            <strong>$2,000</strong>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="guanteletas.png" alt="Guanteletas"><b>Guanteletas</b></div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-info"><img src="deslizadores.png" alt="Deslizadores"><b>Deslizadores</b></div>
+          </div>
+        </div>
           <div class="shop-item">
             <b>🏏 Bat</b>
             <strong>$1,500</strong>
