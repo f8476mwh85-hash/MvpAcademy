@@ -253,6 +253,9 @@ overflow:hidden
 
 .info-item{
 display:flex;
+cursor:pointer;
+text-decoration:none;
+color:inherit;
 gap:12px;
 align-items:center;
 padding:20px;
@@ -659,6 +662,8 @@ gap:12px
 
 .contact-card{
 background:#fff;
+cursor:pointer;
+text-decoration:none;
 color:var(--text);
 border:1px solid var(--line);
 border-radius:12px;
@@ -830,20 +835,20 @@ h2{font-size:40px}
 
 <div class="container info">
   <div class="info-card">
-    <div class="info-item">
+    <a class="info-item" href="tel:+526641132878">
       <div class="ico">☎</div>
       <div>
         <small>Teléfono / WhatsApp</small>
         <b>664 113 2878</b>
       </div>
-    </div>
-    <div class="info-item">
+    </a>
+    <a class="info-item" href="https://instagram.com/mvpacademy.mx" target="_blank" rel="noopener noreferrer">
       <div class="ico">◎</div>
       <div>
         <small>Instagram / Usuario</small>
         <b>@mvpacademy.mx</b>
       </div>
-    </div>
+    </a>
     <div class="info-item">
       <div class="ico">⌖</div>
       <div>
@@ -1035,10 +1040,10 @@ h2{font-size:40px}
             <small>Correo electrónico</small>
             <b>mvp.academy.sc@gmail.com</b>
           </a>
-          <div class="contact-card">
+          <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank" rel="noopener noreferrer">
             <small>Ubicación principal</small>
-            <b><a href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Callejon San Pedro #14057, Guillen, Tijuana Baja California 22106</a></b>
-          </div>
+            <b>Callejon San Pedro #14057, Guillen, Tijuana Baja California 22106</b>
+          </a>
         </div>
       </div>
     </div>
