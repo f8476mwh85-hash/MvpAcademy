@@ -511,6 +511,34 @@ color:#ff5b69;
 font:900 22px 'Barlow Condensed'
 }
 
+
+.shop-product-wrap{
+  display:flex;
+  flex-direction:column;
+  border-bottom:1px solid rgba(255,255,255,.13);
+}
+
+.shop-product-wrap .shop-item{
+  border-bottom:0;
+}
+
+.pdf-link{
+  display:inline-block;
+  margin:0 10px 12px 52px;
+  width:max-content;
+  padding:7px 11px;
+  border-radius:6px;
+  background:#fff;
+  color:var(--navy);
+  font:900 12px 'Barlow Condensed';
+  text-transform:uppercase;
+}
+
+.pdf-link:hover{
+  background:var(--red);
+  color:#fff;
+}
+
 /* MODAL / GALERÍA */
 .modal {
   display: none;
@@ -938,10 +966,13 @@ h2{font-size:40px}
             <strong>$700</strong>
           </a>
 
-          <a href="#" class="shop-item" onclick="openGallery('Ligas de Resistencia', ['ligas.jpg']); return false;">
-            <b><img src="ligas.jpg" alt="Ligas"> Ligas de Resistencia</b>
-            <strong>$500</strong>
-          </a>
+          <div class="shop-product-wrap">
+            <a href="#" class="shop-item" onclick="openGallery('Ligas de Resistencia', ['liga_de_resistencia-removebg-preview (2).png', 'resistencia.jpeg']); return false;">
+              <b><img src="liga_de_resistencia-removebg-preview (2).png" alt="Ligas de Resistencia"> Ligas de Resistencia</b>
+              <strong>$500</strong>
+            </a>
+            <a class="pdf-link" href="Tarjeton de shoulder kit (11 x 15 cm).pdf" target="_blank" rel="noopener noreferrer">📄 Ver ejercicios</a>
+          </div>
 
           <a href="#" class="shop-item" onclick="openGallery('Gorra', ['gorra de mvp.jpg', 'gorra de mvp 2.jpg']); return false;">
             <b><img src="gorra de mvp.jpg" alt="Gorra"> Gorra</b>
