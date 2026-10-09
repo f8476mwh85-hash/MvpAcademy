@@ -3,1070 +3,681 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MVP Academy | Halloween Edition</title>
-<meta name="description" content="MVP Baseball Academy & Sports Complex en Tijuana. Entrenamiento, rehabilitación deportiva y tienda.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MVP Academy | Halloween 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
 <style>
 :root{
-  --bg:#09050e;
-  --panel:#1a0c24;
-  --purple:#9d4dff;
-  --orange:#ff7300;
-  --line:#58326d;
-  --white:#fff;
+ --orange:#ff7900;
+ --purple:#a65aff;
+ --bg:#09050e;
+ --panel:#1c0d27;
+ --line:#643879;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;
-  font-family:Inter,Arial,sans-serif;
-  color:white;
-  background:
-    radial-gradient(circle at 10% 15%,#351047 0%,transparent 28%),
-    radial-gradient(circle at 90% 35%,#401d0b 0%,transparent 25%),
-    #09050e;
+ margin:0;
+ background:radial-gradient(ellipse at top left,#321140,transparent 50%),var(--bg);
+ color:#fff;
+ font-family:Inter,Arial,sans-serif;
 }
 a{color:inherit;text-decoration:none}
 .container{width:min(1180px,92%);margin:auto}
 .top{
-  background:#050208;
-  border-bottom:1px solid #6b347e;
-  padding:10px 0;
-  font-size:12px;
-  font-weight:800;
+ background:#050208;
+ border-bottom:1px solid var(--line);
+ padding:11px 0;
+ font-size:12px;
+ font-weight:800;
 }
-.top .container{
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:10px;
-}
+.top .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 nav{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:rgba(12,5,18,.97);
-  border-bottom:1px solid #71318c;
-  backdrop-filter:blur(12px);
+ position:sticky;top:0;z-index:20;
+ background:#100719f5;
+ border-bottom:1px solid var(--line);
+ backdrop-filter:blur(12px);
 }
-.nav-inner{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  min-height:78px;
-}
+.nav-inner{min-height:78px;display:flex;align-items:center;gap:22px}
 .brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-right:auto;
-  color:#ff8b29;
-  font:900 26px "Barlow Condensed";
+ display:flex;align-items:center;gap:12px;
+ margin-right:auto;color:#ff922f;
+ font:900 27px "Barlow Condensed";
 }
-.brand img{
-  width:60px;
-  height:60px;
-  object-fit:contain;
-}
-.links{display:flex;gap:20px}
-.links a{
-  font:800 16px "Barlow Condensed";
-  text-transform:uppercase;
-}
+.brand img{width:60px;height:60px;object-fit:contain}
+.links{display:flex;gap:18px;flex-wrap:wrap}
+.links a{font:800 16px "Barlow Condensed";text-transform:uppercase}
 .links a:hover{color:var(--orange)}
 .hero{
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(120deg,#100617,#281039);
+ position:relative;overflow:hidden;
+ background:linear-gradient(120deg,#11071c,#2c123e);
 }
 .hero:before{
-  content:"🦇 🦇";
-  position:absolute;
-  right:15%;
-  top:35px;
-  font-size:32px;
-  opacity:.35;
+ content:"🦇 🦇";position:absolute;
+ right:12%;top:28px;font-size:32px;opacity:.4;
 }
 .hero-grid{
-  min-height:540px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-  align-items:center;
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:30px;align-items:center;min-height:540px;
 }
 .ribbon{
-  display:inline-block;
-  padding:9px 16px;
-  background:linear-gradient(90deg,#ff7800,#b83d00);
-  border-radius:6px;
-  font:900 17px "Barlow Condensed";
+ display:inline-block;padding:10px 16px;
+ background:linear-gradient(90deg,#ff7900,#b84200);
+ border-radius:7px;
+ font:900 17px "Barlow Condensed";
 }
 h1{
-  font:900 clamp(65px,8vw,105px)/.85 "Barlow Condensed";
-  margin:25px 0;
+ font:900 clamp(65px,8vw,105px)/.85 "Barlow Condensed";
+ margin:25px 0;
 }
-h1 span{
-  color:#ff831c;
-  text-shadow:0 0 25px #ff730066;
-}
+h1 span{color:#ff8b22;text-shadow:0 0 25px #ff790066}
 h1 small{
-  display:block;
-  font-size:.43em;
-  letter-spacing:4px;
-  margin-top:18px;
-  color:#c68bff;
+ display:block;margin-top:18px;
+ color:#c78aff;font-size:.43em;letter-spacing:4px;
 }
-.hero p{line-height:1.8;color:#e1d3e9}
-.hero-img{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+.hero p{line-height:1.8;color:#e3d4ea}
+.hero-img{display:flex;align-items:center;justify-content:center}
 .hero-img img{
-  width:100%;
-  max-height:450px;
-  object-fit:contain;
-  filter:drop-shadow(0 0 28px #ff730066);
+ width:100%;max-height:460px;object-fit:contain;
+ filter:drop-shadow(0 0 28px #ff790066);
 }
 .btn{
-  display:inline-block;
-  padding:13px 20px;
-  border-radius:7px;
-  font-weight:800;
-  margin:8px 8px 8px 0;
-  text-align:center;
+ display:inline-block;padding:14px 21px;
+ border-radius:8px;font-weight:800;
+ margin:8px 8px 8px 0;text-align:center;
 }
-.btn-orange{
-  background:linear-gradient(90deg,#ff7b00,#c94b00);
-  color:white;
-}
-.btn-outline{border:2px solid #aa67e9}
-.btn:hover{filter:brightness(1.2)}
+.btn-orange{background:linear-gradient(90deg,#ff8500,#cc4700)}
+.btn-outline{border:2px solid var(--purple)}
+.btn:hover{filter:brightness(1.15)}
 section{padding:65px 0}
 h2{
-  font:900 46px "Barlow Condensed";
-  text-transform:uppercase;
-  margin:5px 0 25px;
+ font:900 46px "Barlow Condensed";
+ text-transform:uppercase;margin:6px 0 25px;
 }
 .label{
-  color:#ff862a;
-  font-weight:900;
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
+ color:#ff8b27;font-size:12px;
+ letter-spacing:2px;font-weight:900;
+ text-transform:uppercase;
 }
 
-/* SUPER PROMOCIÓN DE TERROR */
+/* PROMOCIÓN HALLOWEEN */
 .terror-section{
-  position:relative;
-  overflow:hidden;
-  padding:75px 0;
-  background:
-    radial-gradient(circle at 50% 0%,#6c246a 0%,transparent 55%),
-    linear-gradient(180deg,#10051a,#230b2c,#0b0611);
+ position:relative;overflow:hidden;
+ background:
+ radial-gradient(circle at top,#602477,transparent 60%),
+ linear-gradient(#10051a,#200c2a,#0b0611);
+ padding:80px 0;
 }
 .terror-section:before{
-  content:"🦇";
-  position:absolute;
-  left:5%;
-  top:35px;
-  font-size:55px;
-  opacity:.5;
-  transform:rotate(-20deg);
+ content:"🦇";position:absolute;left:5%;top:45px;font-size:55px;
 }
 .terror-section:after{
-  content:"🦇";
-  position:absolute;
-  right:6%;
-  top:70px;
-  font-size:45px;
-  opacity:.5;
-  transform:rotate(20deg);
+ content:"🦇";position:absolute;right:5%;top:70px;font-size:45px;
 }
 .terror-card{
-  position:relative;
-  max-width:800px;
-  margin:auto;
-  padding:45px 30px;
-  border:2px solid #ff7900;
-  border-radius:24px;
-  text-align:center;
-  background:linear-gradient(145deg,#2b103a,#11071c);
-  box-shadow:
-    0 0 30px #ff730045,
-    0 0 65px #8225c72b,
-    inset 0 0 30px #ff73000b;
+ max-width:800px;margin:auto;padding:45px 30px;
+ border:2px solid #ff7900;border-radius:24px;
+ text-align:center;
+ background:linear-gradient(145deg,#2d103d,#11071c);
+ box-shadow:0 0 35px #ff79004d,0 0 75px #7c2dc233;
 }
 .terror-tag{
-  display:inline-block;
-  background:#ff7900;
-  color:white;
-  padding:10px 20px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:2px;
+ display:inline-block;background:#ff7900;
+ padding:10px 20px;border-radius:30px;
+ font-size:12px;font-weight:900;letter-spacing:1px;
 }
 .terror-title{
-  margin:22px 0 10px;
-  font:900 clamp(42px,7vw,76px)/.95 "Barlow Condensed";
-  color:#ff8b20;
-  text-shadow:0 0 20px #ff730088;
+ color:#ff902a;
+ font:900 clamp(42px,7vw,76px)/.95 "Barlow Condensed";
+ margin:22px 0;
+ text-shadow:0 0 22px #ff790088;
 }
 .terror-subtitle{
-  font:900 32px "Barlow Condensed";
-  color:white;
-  text-transform:uppercase;
-  margin:18px 0;
+ font:900 32px "Barlow Condensed";
+ margin:18px 0;
 }
 .terror-old{
-  color:#bba9c6;
-  font-size:25px;
-  font-weight:800;
-  text-decoration:line-through;
+ color:#c7b5d0;text-decoration:line-through;
+ font-size:25px;font-weight:800;
 }
 .terror-price{
-  margin:10px 0;
-  color:#ff8c1b;
-  font:900 clamp(65px,12vw,105px)/1 "Barlow Condensed";
-  text-shadow:0 0 25px #ff730066;
+ font:900 clamp(70px,12vw,105px)/1 "Barlow Condensed";
+ color:#ff8b1d;margin:15px 0;
+ text-shadow:0 0 25px #ff790066;
 }
 .terror-save{
-  display:inline-block;
-  background:#6525a3;
-  border:1px solid #b976ff;
-  padding:10px 22px;
-  border-radius:8px;
-  font-weight:900;
-  margin:10px 0 20px;
+ display:inline-block;padding:11px 22px;
+ background:#62249e;border:1px solid #b976ff;
+ border-radius:9px;font-weight:900;
 }
 .terror-features{
-  margin:20px auto;
-  max-width:500px;
-  color:#eee0f4;
-  line-height:2;
-  font-size:15px;
+ line-height:2.1;color:#eadbf2;
+ margin:23px auto;font-size:15px;
 }
 .terror-btn{
-  display:inline-block;
-  background:linear-gradient(90deg,#ff8b00,#ff4300);
-  color:white;
-  padding:17px 30px;
-  margin-top:15px;
-  border-radius:9px;
-  font-weight:900;
-  text-transform:uppercase;
-  box-shadow:0 0 25px #ff730055;
-  transition:transform .2s;
+ display:inline-block;
+ padding:18px 28px;
+ background:linear-gradient(90deg,#ff8a00,#f54a00);
+ border-radius:9px;
+ font-weight:900;
+ box-shadow:0 0 25px #ff790066;
+ transition:transform .2s;
 }
 .terror-btn:hover{transform:scale(1.05)}
-.terror-footer{
-  margin-top:22px;
-  color:#c99ee9;
-  font-size:13px;
-  font-weight:700;
-}
+.terror-footer{margin-top:25px;color:#d2a2f5;font-size:13px;font-weight:800}
 
-/* TABLAS DE PRECIOS */
-.tables{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-}
+/* TARJETAS Y PRECIOS */
+.tables{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .panel{
-  background:linear-gradient(140deg,#190b22,#2a1138);
-  border:1px solid var(--line);
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 12px 35px #0006;
+ background:linear-gradient(140deg,#190b22,#2a1138);
+ border:1px solid var(--line);
+ border-radius:14px;overflow:hidden;
+ box-shadow:0 12px 35px #0006;
 }
 .panel-title{
-  padding:15px 20px;
-  background:linear-gradient(90deg,#ff7300,#a93800);
-  font:900 26px "Barlow Condensed";
-  text-transform:uppercase;
+ padding:16px 20px;
+ background:linear-gradient(90deg,#ff7900,#a63a00);
+ font:900 26px "Barlow Condensed";
+ text-transform:uppercase;
 }
 .price-row{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:8px 15px;
-  padding:17px 20px;
-  border-bottom:1px solid #ffffff20;
+ display:grid;grid-template-columns:1fr auto;
+ gap:8px 15px;padding:17px 20px;
+ border-bottom:1px solid #ffffff20;
 }
 .price-row:last-child{border:0}
-.price-row b{
-  font:900 20px "Barlow Condensed";
-  text-transform:uppercase;
-}
+.price-row b{font:900 20px "Barlow Condensed";text-transform:uppercase}
 .price-row span{
-  grid-column:1/-1;
-  grid-row:2;
-  font-size:12px;
-  color:#cdbbd6;
+ grid-column:1/-1;grid-row:2;
+ font-size:12px;color:#cdbbd6;
 }
-.money{
-  color:#ff8a22;
-  font:900 25px "Barlow Condensed";
-}
+.money{color:#ff8c2c;font:900 25px "Barlow Condensed"}
 
 /* TIENDA */
 .shop-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:0 20px;
-  padding:12px 20px;
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:0 20px;padding:12px 20px;
 }
 .product{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  padding:14px 8px;
-  border-bottom:1px solid #ffffff20;
-  cursor:pointer;
+ display:flex;align-items:center;justify-content:space-between;
+ gap:12px;padding:14px 8px;
+ border-bottom:1px solid #ffffff20;
+ cursor:pointer;
 }
-.product:hover{
-  background:#ff730015;
-  border-radius:7px;
-}
+.product:hover{background:#ff790015;border-radius:7px}
 .product-name{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font:800 19px "Barlow Condensed";
-  text-transform:uppercase;
+ display:flex;align-items:center;gap:10px;
+ font:800 19px "Barlow Condensed";
+ text-transform:uppercase;
 }
-.product img{
-  width:38px;
-  height:38px;
-  object-fit:cover;
-  border-radius:5px;
-}
-.product strong{
-  color:#ff8625;
-  font:900 23px "Barlow Condensed";
-}
+.product img{width:38px;height:38px;object-fit:cover;border-radius:5px}
+.product strong{color:#ff8b24;font:900 23px "Barlow Condensed"}
 .pdf-link{
-  display:inline-block;
-  padding:9px 13px;
-  margin:5px 10px 12px;
-  background:#ff7300;
-  border-radius:6px;
-  font-weight:800;
-  font-size:12px;
+ display:inline-block;margin:5px 10px 12px;
+ padding:9px 13px;background:#ff7900;
+ border-radius:6px;font-size:12px;font-weight:800;
 }
 
 /* CONTACTO */
-.contact-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:20px;
-}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
 .contact-main{
-  background:linear-gradient(130deg,#1a0b25,#351344);
-  padding:30px;
-  border-radius:14px;
-  border:1px solid var(--line);
+ background:linear-gradient(130deg,#1a0b25,#351344);
+ border:1px solid var(--line);
+ padding:30px;border-radius:14px;
 }
 .contact-main p{line-height:1.7}
-.contact-main a{color:#ff963e}
+.contact-main p a{color:#ff963e}
 .contact-cards{display:grid;gap:12px}
 .contact-card{
-  display:block;
-  background:#1a0b25;
-  border:1px solid var(--line);
-  padding:20px;
-  border-radius:12px;
+ display:block;background:#1a0b25;
+ border:1px solid var(--line);
+ padding:20px;border-radius:12px;
 }
 .contact-card:hover{border-color:var(--orange)}
-.contact-card small{
-  display:block;
-  color:#b69bc5;
-  margin-bottom:8px;
-}
+.contact-card small{display:block;color:#b69bc5;margin-bottom:8px}
 footer{
-  background:#050208;
-  padding:35px 0;
-  border-top:1px solid var(--line);
-  text-align:center;
+ background:#050208;padding:35px 0;
+ border-top:1px solid var(--line);
+ text-align:center;
 }
-footer b{
-  font:900 30px "Barlow Condensed";
-  color:#ff8120;
-}
+footer b{font:900 30px "Barlow Condensed";color:#ff8120}
 
 /* GALERÍA */
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:#050208ed;
-  z-index:100;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+ display:none;position:fixed;inset:0;
+ z-index:100;background:#050208ed;
+ align-items:center;justify-content:center;padding:20px;
 }
 .modal-box{
-  position:relative;
-  width:min(500px,100%);
-  padding:25px;
-  background:#1b0b28;
-  border:1px solid var(--purple);
-  border-radius:14px;
-  text-align:center;
+ position:relative;width:min(500px,100%);
+ padding:25px;background:#1b0b28;
+ border:1px solid var(--purple);
+ border-radius:14px;text-align:center;
 }
 .modal-box h3{
-  font:900 28px "Barlow Condensed";
-  text-transform:uppercase;
+ font:900 28px "Barlow Condensed";
+ text-transform:uppercase;
 }
-.modal-img{
-  width:100%;
-  height:330px;
-  object-fit:contain;
-}
-.modal-controls{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-}
+.modal-img{width:100%;height:330px;object-fit:contain}
+.modal-controls{display:flex;align-items:center;justify-content:space-between}
 .modal button{
-  background:#ff7300;
-  color:white;
-  border:0;
-  border-radius:6px;
-  padding:10px 16px;
-  cursor:pointer;
+ background:#ff7900;color:white;border:0;
+ border-radius:6px;padding:10px 16px;cursor:pointer;
 }
-.close{
-  position:absolute;
-  right:12px;
-  top:12px;
-  font-size:24px;
-}
+.close{position:absolute;right:12px;top:12px;font-size:24px}
 
-/* DISEÑO PARA CELULARES */
+/* RESPONSIVE */
 @media(max-width:850px){
-  .links{display:none}
-  .hero-grid,.tables,.contact-grid{
-    grid-template-columns:1fr;
-  }
-  .hero-grid{
-    text-align:center;
-    padding:45px 0;
-  }
-  .hero-img img{max-height:340px}
+ .links{display:none}
+ .hero-grid,.tables,.contact-grid{grid-template-columns:1fr}
+ .hero-grid{text-align:center;padding:45px 0}
+ .hero-img img{max-height:350px}
 }
 @media(max-width:600px){
-  .top .container{
-    justify-content:center;
-    text-align:center;
-  }
-  .shop-grid{grid-template-columns:1fr}
-  h2{font-size:39px}
-  h1{font-size:70px}
-  .brand{font-size:22px}
-  .brand img{
-    width:48px;
-    height:48px;
-  }
-  .terror-card{padding:35px 18px}
-  .terror-price{font-size:75px}
-  .price-row{padding:15px}
-  .money{font-size:21px}
+ .top .container{justify-content:center;text-align:center}
+ .shop-grid{grid-template-columns:1fr}
+ h2{font-size:39px}
+ h1{font-size:70px}
+ .brand{font-size:22px}
+ .brand img{width:48px;height:48px}
+ .terror-card{padding:35px 18px}
+ .terror-price{font-size:75px}
+ .price-row{padding:15px}
+ .money{font-size:21px}
 }
 </style>
 </head>
-
 <body>
 
-<!-- BARRA SUPERIOR -->
 <div class="top">
-  <div class="container">
-    <span>🎃 MVP HALLOWEEN · CLASES A PARTIR DE LOS 4 AÑOS</span>
-    <span>
-      <a href="tel:+526641132878">664 113 2878</a> ·
-      <a href="https://instagram.com/mvpacademy.mx">@mvpacademy.mx</a>
-    </span>
-  </div>
+ <div class="container">
+  <span>🎃 MVP HALLOWEEN · CLASES A PARTIR DE LOS 4 AÑOS</span>
+  <span>
+   <a href="tel:+526641132878">664 113 2878</a> ·
+   <a href="https://instagram.com/mvpacademy.mx">@mvpacademy.mx</a>
+  </span>
+ </div>
 </div>
 
-<!-- MENÚ Y LOGO PEQUEÑO -->
 <nav>
-  <div class="container nav-inner">
-    <a class="brand" href="#inicio">
-      <img
-        src="Emblema_deportivo_de_Halloween_siniestro-removebg-preview.png"
-        alt="Logo pequeño MVP Halloween">
-      MVP ACADEMY
-    </a>
-
-    <div class="links">
-      <a href="#inicio">Inicio</a>
-      <a href="#promocion">Promoción</a>
-      <a href="#precios">Precios</a>
-      <a href="#rehab">Rehab</a>
-      <a href="#shop">Shop</a>
-      <a href="#contacto">Contacto</a>
-    </div>
+ <div class="container nav-inner">
+  <a class="brand" href="#inicio">
+   <img src="Emblema_deportivo_de_Halloween_siniestro-removebg-preview.png" alt="Logo pequeño MVP Halloween">
+   MVP ACADEMY
+  </a>
+  <div class="links">
+   <a href="#inicio">Inicio</a>
+   <a href="#promocion">Promoción</a>
+   <a href="#precios">Precios</a>
+   <a href="#rehab">Rehab</a>
+   <a href="#shop">Shop</a>
+   <a href="#contacto">Contacto</a>
   </div>
+ </div>
 </nav>
 
-<!-- INICIO -->
 <header class="hero" id="inicio">
-  <div class="container hero-grid">
-
-    <div>
-      <div class="ribbon">
-        🎃 MVP SPORTS COMPLEX · TIJUANA
-      </div>
-
-      <h1>
-        <span>MVP</span><br>
-        BASEBALL<br>
-        <small>ACADEMY</small>
-      </h1>
-
-      <p>
-        Entrenamiento de béisbol, preparación física,
-        rehabilitación deportiva y equipamiento
-        para desarrollar tu máximo nivel.
-      </p>
-
-      <p style="color:#ff963e;font-weight:800">
-        👻 EDICIÓN HALLOWEEN 2026
-      </p>
-
-      <a class="btn btn-orange"
-         href="https://wa.me/526641132878"
-         target="_blank">
-        WhatsApp
-      </a>
-
-      <a class="btn btn-outline" href="#promocion">
-        Ver promoción
-      </a>
-    </div>
-
-    <!-- NUEVO LOGO GRANDE DE HALLOWEEN -->
-    <div class="hero-img">
-      <img
-        src="Logo Halloween MVP Academy con calabaza ardiente.png"
-        alt="Logo Halloween MVP Academy con calabaza ardiente">
-    </div>
-
+ <div class="container hero-grid">
+  <div>
+   <div class="ribbon">🎃 MVP SPORTS COMPLEX · TIJUANA</div>
+   <h1><span>MVP</span><br>BASEBALL<br><small>ACADEMY</small></h1>
+   <p>
+    Entrenamiento de béisbol, preparación física,
+    rehabilitación deportiva y equipamiento
+    para desarrollar tu máximo nivel.
+   </p>
+   <p style="color:#ff963e;font-weight:800">👻 EDICIÓN HALLOWEEN 2026</p>
+   <a class="btn btn-orange" href="https://wa.me/526641132878" target="_blank">WhatsApp</a>
+   <a class="btn btn-outline" href="#promocion">Ver promoción</a>
   </div>
+
+  <!-- LOGO GRANDE SUSTITUIDO -->
+  <div class="hero-img">
+   <img
+    src="Logo Halloween MVP Academy con calabaza ardiente.png"
+    alt="Logo Halloween MVP Academy con calabaza ardiente">
+  </div>
+ </div>
 </header>
 
 <!-- SUPER PROMOCIÓN DE TERROR -->
 <section class="terror-section" id="promocion">
-  <div class="container">
-    <div class="terror-card">
-
-      <div class="terror-tag">
-        🎃 OFERTA ESPECIAL DE HALLOWEEN 🎃
-      </div>
-
-      <h2 class="terror-title">
-        SUPER PROMOCIÓN<br>DE TERROR
-      </h2>
-
-      <div class="terror-subtitle">
-        👻 MEMBRESÍA BÁSICA 👻
-      </div>
-
-      <div class="terror-old">
-        ANTES $2,500 MXN
-      </div>
-
-      <div class="terror-price">
-        $2,000
-      </div>
-
-      <div class="terror-save">
-        🦇 ¡AHORRA $500 · 20% DE DESCUENTO!
-      </div>
-
-      <div class="terror-features">
-        ⚾ 8 sesiones de entrenamiento<br>
-        🎃 2 sesiones por semana<br>
-        🦇 Duración de 4 semanas<br>
-        👻 50% bateo y 50% fildeo
-      </div>
-
-      <a
-        class="terror-btn"
-        href="https://wa.me/526641132878?text=Hola%2C%20quiero%20aprovechar%20la%20SUPER%20PROMOCI%C3%93N%20DE%20TERROR%20de%20la%20Membres%C3%ADa%20B%C3%A1sica%20por%20%242%2C000%20MXN."
-        target="_blank"
-        rel="noopener noreferrer">
-        🎃 ¡QUIERO MI PROMOCIÓN!
-      </a>
-
-      <div class="terror-footer">
-        🦇 ¡ENTRENA COMO UN VERDADERO MONSTRUO DEL BÉISBOL! 🦇
-      </div>
-
-    </div>
+ <div class="container">
+  <div class="terror-card">
+   <div class="terror-tag">🎃 OFERTA ESPECIAL DE HALLOWEEN 🎃</div>
+   <h2 class="terror-title">SUPER PROMOCIÓN<br>DE TERROR</h2>
+   <div class="terror-subtitle">👻 MEMBRESÍA BÁSICA 👻</div>
+   <div class="terror-old">ANTES $2,500 MXN</div>
+   <div class="terror-price">$2,000</div>
+   <div class="terror-save">🦇 ¡AHORRA $500 · 20% DE DESCUENTO!</div>
+   <div class="terror-features">
+    ⚾ 8 sesiones de entrenamiento<br>
+    🎃 2 sesiones por semana<br>
+    🦇 Duración de 4 semanas<br>
+    👻 50% bateo y 50% fildeo
+   </div>
+   <a class="terror-btn"
+    href="https://wa.me/526641132878?text=Hola%2C%20quiero%20aprovechar%20la%20SUPER%20PROMOCI%C3%93N%20DE%20TERROR%20de%20la%20Membres%C3%ADa%20B%C3%A1sica%20por%20%242%2C000%20MXN."
+    target="_blank" rel="noopener noreferrer">
+    🎃 ¡QUIERO MI PROMOCIÓN!
+   </a>
+   <div class="terror-footer">
+    🦇 ¡ENTRENA COMO UN VERDADERO MONSTRUO DEL BÉISBOL! 🦇
+   </div>
   </div>
+ </div>
 </section>
 
 <main>
 
-<!-- PRECIOS -->
 <section id="precios">
-  <div class="container">
-    <div class="label">Entrenamiento</div>
-    <h2>🎃 Membresías y precios</h2>
-
-    <div class="tables">
-
-      <div class="panel">
-        <div class="panel-title">
-          Membresías y paquetes
-        </div>
-
-        <div class="price-row">
-          <b>Membresía 4x4</b>
-          <span>
-            4 sesiones personalizadas + 4 de preparación física
-          </span>
-          <div class="money">$3,500</div>
-        </div>
-
-        <div class="price-row">
-          <b>Membresía Básica</b>
-          <span>
-            2 sesiones por semana · 4 semanas ·
-            50% bateo / 50% fildeo
-          </span>
-          <div class="money">$2,500</div>
-        </div>
-
-        <div class="price-row">
-          <b>Preparación Física</b>
-          <span>
-            2 sesiones por semana · 5 semanas +
-            1 recovery deportivo
-          </span>
-          <div class="money">$2,500</div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-title">
-          Sesiones y renta
-        </div>
-
-        <div class="price-row">
-          <b>Personalizados</b>
-          <span>
-            Bateo, pitcheo o catcher ·
-            1 sesión / 4 sesiones
-          </span>
-          <div class="money">$650 / $2,200</div>
-        </div>
-
-        <div class="price-row">
-          <b>Clase por Día</b>
-          <span>
-            Preparación física, defensiva u ofensiva
-          </span>
-          <div class="money">$400</div>
-        </div>
-
-        <div class="price-row">
-          <b>Pruebas Físicas</b>
-          <span>
-            Análisis de parámetros personales
-          </span>
-          <div class="money">$600</div>
-        </div>
-
-        <div class="price-row">
-          <b>Renta de Jaula</b>
-          <span>
-            1 hora · 1–3 personas / 4–10 personas
-          </span>
-          <div class="money">$800 / $1,400</div>
-        </div>
-
-      </div>
+ <div class="container">
+  <div class="label">Entrenamiento</div>
+  <h2>🎃 Membresías y precios</h2>
+  <div class="tables">
+   <div class="panel">
+    <div class="panel-title">Membresías y paquetes</div>
+    <div class="price-row">
+     <b>Membresía 4x4</b>
+     <span>4 sesiones personalizadas + 4 de preparación física</span>
+     <div class="money">$3,500</div>
     </div>
+    <div class="price-row">
+     <b>Membresía Básica</b>
+     <span>2 sesiones por semana · 4 semanas · 50% bateo / 50% fildeo</span>
+     <div class="money">$2,500</div>
+    </div>
+    <div class="price-row">
+     <b>Preparación Física</b>
+     <span>2 sesiones por semana · 5 semanas + 1 recovery deportivo</span>
+     <div class="money">$2,500</div>
+    </div>
+   </div>
+   <div class="panel">
+    <div class="panel-title">Sesiones y renta</div>
+    <div class="price-row">
+     <b>Personalizados</b>
+     <span>Bateo, pitcheo o catcher · 1 sesión / 4 sesiones</span>
+     <div class="money">$650 / $2,200</div>
+    </div>
+    <div class="price-row">
+     <b>Clase por Día</b>
+     <span>Preparación física, defensiva u ofensiva</span>
+     <div class="money">$400</div>
+    </div>
+    <div class="price-row">
+     <b>Pruebas Físicas</b>
+     <span>Análisis de parámetros personales</span>
+     <div class="money">$600</div>
+    </div>
+    <div class="price-row">
+     <b>Renta de Jaula</b>
+     <span>1 hora · 1–3 personas / 4–10 personas</span>
+     <div class="money">$800 / $1,400</div>
+    </div>
+   </div>
   </div>
+ </div>
 </section>
 
-<!-- REHAB -->
 <section id="rehab">
-  <div class="container">
-    <div class="label">Recuperación deportiva</div>
-    <h2>👻 MVP Rehab Center</h2>
-
-    <div class="panel">
-      <div class="panel-title">Servicios</div>
-
-      <div class="price-row">
-        <b>Fisioterapia Deportiva</b>
-        <span>Consulta general</span>
-        <div class="money">$800</div>
-      </div>
-
-      <div class="price-row">
-        <b>Fisioterapia Deportiva</b>
-        <span>Recovery deportivo</span>
-        <div class="money">$800</div>
-      </div>
-
-      <div class="price-row">
-        <b>Fisioterapia Deportiva</b>
-        <span>Suero vitaminado</span>
-        <div class="money">$1,800</div>
-      </div>
-
-      <div class="price-row">
-        <b>Médico Deportivo</b>
-        <span>Primera consulta</span>
-        <div class="money">$1,200</div>
-      </div>
-
-      <div class="price-row">
-        <b>Médico Deportivo</b>
-        <span>Reconsulta</span>
-        <div class="money">$600</div>
-      </div>
-    </div>
+ <div class="container">
+  <div class="label">Recuperación deportiva</div>
+  <h2>👻 MVP Rehab Center</h2>
+  <div class="panel">
+   <div class="panel-title">Servicios</div>
+   <div class="price-row">
+    <b>Fisioterapia Deportiva</b>
+    <span>Consulta general</span>
+    <div class="money">$800</div>
+   </div>
+   <div class="price-row">
+    <b>Fisioterapia Deportiva</b>
+    <span>Recovery deportivo</span>
+    <div class="money">$800</div>
+   </div>
+   <div class="price-row">
+    <b>Fisioterapia Deportiva</b>
+    <span>Suero vitaminado</span>
+    <div class="money">$1,800</div>
+   </div>
+   <div class="price-row">
+    <b>Médico Deportivo</b>
+    <span>Primera consulta</span>
+    <div class="money">$1,200</div>
+   </div>
+   <div class="price-row">
+    <b>Médico Deportivo</b>
+    <span>Reconsulta</span>
+    <div class="money">$600</div>
+   </div>
   </div>
+ </div>
 </section>
 
-<!-- TIENDA -->
 <section id="shop">
-  <div class="container">
-    <div class="label">Equipamiento y ropa</div>
-    <h2>🦇 MVP Shop</h2>
-
-    <div class="panel">
-      <div class="panel-title">Productos</div>
-      <div class="shop-grid" id="shop-grid"></div>
-    </div>
+ <div class="container">
+  <div class="label">Equipamiento y ropa</div>
+  <h2>🦇 MVP Shop</h2>
+  <div class="panel">
+   <div class="panel-title">Productos</div>
+   <div class="shop-grid" id="shop-grid"></div>
   </div>
+ </div>
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto">
-  <div class="container">
-    <div class="contact-grid">
-
-      <div class="contact-main">
-        <div class="label">Visítanos</div>
-        <h2>🎃 Contacto y ubicación</h2>
-
-        <p>
-          <b>Edades:</b>
-          Clases y personalizados a partir de los 4 años.
-        </p>
-
-        <p>
-          <b>Dirección:</b>
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106"
-            target="_blank">
-            Callejón San Pedro #14057, Guillén,
-            Tijuana, Baja California 22106
-          </a>
-        </p>
-
-        <p>
-          <b>Correo:</b>
-          <a href="mailto:mvp.academy.sc@gmail.com">
-            mvp.academy.sc@gmail.com
-          </a>
-        </p>
-
-        <a class="btn btn-orange"
-           href="https://wa.me/526641132878"
-           target="_blank">
-          WhatsApp
-        </a>
-
-        <a class="btn btn-outline"
-           href="https://instagram.com/mvpacademy.mx"
-           target="_blank">
-          Instagram
-        </a>
-      </div>
-
-      <div class="contact-cards">
-
-        <a class="contact-card"
-           href="tel:+526641132878">
-          <small>Teléfono / WhatsApp</small>
-          <b>664 113 2878</b>
-        </a>
-
-        <a class="contact-card"
-           href="mailto:mvp.academy.sc@gmail.com">
-          <small>Correo electrónico</small>
-          <b>mvp.academy.sc@gmail.com</b>
-        </a>
-
-        <a
-          class="contact-card"
-          href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106"
-          target="_blank">
-          <small>Ubicación principal</small>
-          <b>Callejón San Pedro #14057, Guillén, Tijuana</b>
-        </a>
-
-      </div>
-    </div>
+ <div class="container">
+  <div class="contact-grid">
+   <div class="contact-main">
+    <div class="label">Visítanos</div>
+    <h2>🎃 Contacto y ubicación</h2>
+    <p><b>Edades:</b> Clases y personalizados a partir de los 4 años.</p>
+    <p>
+     <b>Dirección:</b>
+     <a href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank">
+      Callejón San Pedro #14057, Guillén, Tijuana, Baja California 22106
+     </a>
+    </p>
+    <p><b>Correo:</b> <a href="mailto:mvp.academy.sc@gmail.com">mvp.academy.sc@gmail.com</a></p>
+    <a class="btn btn-orange" href="https://wa.me/526641132878" target="_blank">WhatsApp</a>
+    <a class="btn btn-outline" href="https://instagram.com/mvpacademy.mx" target="_blank">Instagram</a>
+   </div>
+   <div class="contact-cards">
+    <a class="contact-card" href="tel:+526641132878">
+     <small>Teléfono / WhatsApp</small>
+     <b>664 113 2878</b>
+    </a>
+    <a class="contact-card" href="mailto:mvp.academy.sc@gmail.com">
+     <small>Correo electrónico</small>
+     <b>mvp.academy.sc@gmail.com</b>
+    </a>
+    <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank">
+     <small>Ubicación principal</small>
+     <b>Callejón San Pedro #14057, Guillén, Tijuana</b>
+    </a>
+   </div>
   </div>
+ </div>
 </section>
 
 </main>
 
 <!-- GALERÍA DE PRODUCTOS -->
-<div class="modal"
-     id="gallery-modal"
-     onclick="closeGallery()">
-
-  <div class="modal-box"
-       onclick="event.stopPropagation()">
-
-    <button class="close"
-            onclick="closeGallery()">
-      ×
-    </button>
-
-    <h3 id="modal-title"></h3>
-
-    <img
-      class="modal-img"
-      id="modal-img"
-      alt="Producto MVP">
-
-    <div class="modal-controls">
-      <button onclick="changeImage(-1)">❮</button>
-      <span id="modal-counter"></span>
-      <button onclick="changeImage(1)">❯</button>
-    </div>
-
+<div class="modal" id="gallery-modal" onclick="closeGallery()">
+ <div class="modal-box" onclick="event.stopPropagation()">
+  <button class="close" onclick="closeGallery()">×</button>
+  <h3 id="modal-title"></h3>
+  <img class="modal-img" id="modal-img" alt="Producto MVP">
+  <div class="modal-controls">
+   <button onclick="changeImage(-1)">❮</button>
+   <span id="modal-counter"></span>
+   <button onclick="changeImage(1)">❯</button>
   </div>
+ </div>
 </div>
 
 <footer>
-  <div class="container">
-    <b>MVP BASEBALL ACADEMY</b>
-    <p>Más que un entrenamiento, formamos campeones.</p>
-    <p>🎃 HALLOWEEN EDITION · MVP SPORTS COMPLEX</p>
-  </div>
+ <div class="container">
+  <b>MVP BASEBALL ACADEMY</b>
+  <p>Más que un entrenamiento, formamos campeones.</p>
+  <p>🎃 HALLOWEEN EDITION · MVP SPORTS COMPLEX</p>
+ </div>
 </footer>
 
 <script>
-
-/* PRODUCTOS MVP SHOP */
-const products = [
-  {
-    name:"Camiseta",
-    price:"$400",
-    images:[
-      "camiseta negra de mvp.jpg",
-      "camiseta roja de mvp.jpg"
-    ]
-  },
-  {
-    name:"Bat",
-    price:"$1,500",
-    images:[
-      "bat mvp amarillo.jpg",
-      "bat mvp azul.jpg",
-      "bat mvp color madera normal con cafe.jpg",
-      "bat mvp madera normal.jpg",
-      "bat mvp negro.jpg",
-      "bat mvp rojo con negro diferente modelo.jpg",
-      "bat mvp rojo con negro en diferente pose.jpg",
-      "bat mvp rojo con negro.jpg",
-      "bat mvp rosa con azul pose diferente.jpg",
-      "bat mvp rosa con azul.jpg"
-    ]
-  },
-  {
-    name:"Sudadera",
-    price:"$700",
-    images:[
-      "sudadera de mvp.jpg"
-    ]
-  },
-  {
-    name:"Ligas de Resistencia",
-    price:"$500",
-    images:[
-      "liga_de_resistencia-removebg-preview (2).png",
-      "resistencia.jpeg"
-    ],
-    pdf:"Tarjeton de shoulder kit (11 x 15 cm).pdf"
-  },
-  {
-    name:"Gorra",
-    price:"$500",
-    images:[
-      "gorra de mvp.jpg",
-      "gorra de mvp 2.jpg"
-    ]
-  },
-  {
-    name:"Gorro",
-    price:"$400",
-    images:[
-      "gorro de mvp.jpg"
-    ]
-  },
-  {
-    name:"Guante",
-    price:"$2,000",
-    images:[
-      "guante de mvp negro con color piel.jpg",
-      "guante de mvp negro.jpg",
-      "guante de mvp negroo.jpg",
-      "guante de mvp negrooo.jpg",
-      "guante de mvp torta foto 2.jpg",
-      "guante de mvp torta.jpg"
-    ]
-  },
-  {
-    name:"Guanteletas",
-    price:"$700",
-    images:[
-      "guanteletas mvp azul muy oscuro.jpg",
-      "guanteletas mvp blancas.jpg",
-      "guanteletas mvp blanco con rojo y azul oscuro.jpg",
-      "guanteletas mvp negras con amarillo.jpg",
-      "guanteletas mvp negras.jpg",
-      "guanteletas mvp negro con blanco.jpg",
-      "guanteletas mvp rojo.jpg"
-    ]
-  },
-  {
-    name:"Deslizadores",
-    price:"$700",
-    images:[
-      "deslisadores mvp azul con rosa.jpg",
-      "deslisadores mvp blanca.jpg",
-      "deslisadores mvp de mario y luigi.jpg"
-    ]
-  },
-  {
-    name:"Lentes MVP",
-    price:"$500",
-    images:[
-      "lentes mvp  blanco.jpg",
-      "lentes mvp  naranja.jpg",
-      "lentes mvp  negro no tan negro.jpg",
-      "lentes mvp azul.jpg",
-      "lentes mvp negro completo.jpg",
-      "lentes mvp verde.jpg"
-    ]
-  }
+const products=[
+ {
+  name:"Camiseta",price:"$400",
+  images:["camiseta negra de mvp.jpg","camiseta roja de mvp.jpg"]
+ },
+ {
+  name:"Bat",price:"$1,500",
+  images:[
+   "bat mvp amarillo.jpg",
+   "bat mvp azul.jpg",
+   "bat mvp color madera normal con cafe.jpg",
+   "bat mvp madera normal.jpg",
+   "bat mvp negro.jpg",
+   "bat mvp rojo con negro diferente modelo.jpg",
+   "bat mvp rojo con negro en diferente pose.jpg",
+   "bat mvp rojo con negro.jpg",
+   "bat mvp rosa con azul pose diferente.jpg",
+   "bat mvp rosa con azul.jpg"
+  ]
+ },
+ {
+  name:"Sudadera",price:"$700",
+  images:["sudadera de mvp.jpg"]
+ },
+ {
+  name:"Ligas de Resistencia",price:"$500",
+  images:[
+   "liga_de_resistencia-removebg-preview (2).png",
+   "resistencia.jpeg"
+  ],
+  pdf:"Tarjeton de shoulder kit (11 x 15 cm).pdf"
+ },
+ {
+  name:"Gorra",price:"$500",
+  images:["gorra de mvp.jpg","gorra de mvp 2.jpg"]
+ },
+ {
+  name:"Gorro",price:"$400",
+  images:["gorro de mvp.jpg"]
+ },
+ {
+  name:"Guante",price:"$2,000",
+  images:[
+   "guante de mvp negro con color piel.jpg",
+   "guante de mvp negro.jpg",
+   "guante de mvp negroo.jpg",
+   "guante de mvp negrooo.jpg",
+   "guante de mvp torta foto 2.jpg",
+   "guante de mvp torta.jpg"
+  ]
+ },
+ {
+  name:"Guanteletas",price:"$700",
+  images:[
+   "guanteletas mvp azul muy oscuro.jpg",
+   "guanteletas mvp blancas.jpg",
+   "guanteletas mvp blanco con rojo y azul oscuro.jpg",
+   "guanteletas mvp negras con amarillo.jpg",
+   "guanteletas mvp negras.jpg",
+   "guanteletas mvp negro con blanco.jpg",
+   "guanteletas mvp rojo.jpg"
+  ]
+ },
+ {
+  name:"Deslizadores",price:"$700",
+  images:[
+   "deslisadores mvp azul con rosa.jpg",
+   "deslisadores mvp blanca.jpg",
+   "deslisadores mvp de mario y luigi.jpg"
+  ]
+ },
+ {
+  name:"Lentes MVP",price:"$500",
+  images:[
+   "lentes mvp  blanco.jpg",
+   "lentes mvp  naranja.jpg",
+   "lentes mvp  negro no tan negro.jpg",
+   "lentes mvp azul.jpg",
+   "lentes mvp negro completo.jpg",
+   "lentes mvp verde.jpg"
+  ]
+ }
 ];
 
-/* MOSTRAR PRODUCTOS */
 const grid=document.getElementById("shop-grid");
 
 products.forEach((p,i)=>{
-  const wrap=document.createElement("div");
-  const item=document.createElement("div");
-  item.className="product";
+ const wrap=document.createElement("div");
+ const item=document.createElement("div");
+ item.className="product";
+ const name=document.createElement("div");
+ name.className="product-name";
+ const img=document.createElement("img");
+ img.src=p.images[0];
+ img.alt=p.name;
+ const label=document.createElement("span");
+ label.textContent=p.name;
+ name.append(img,label);
+ const price=document.createElement("strong");
+ price.textContent=p.price;
+ item.append(name,price);
+ item.onclick=()=>openGallery(i);
+ wrap.appendChild(item);
 
-  const name=document.createElement("div");
-  name.className="product-name";
-
-  const img=document.createElement("img");
-  img.src=p.images[0];
-  img.alt=p.name;
-
-  const label=document.createElement("span");
-  label.textContent=p.name;
-
-  name.append(img,label);
-
-  const price=document.createElement("strong");
-  price.textContent=p.price;
-
-  item.append(name,price);
-  item.onclick=()=>openGallery(i);
-  wrap.appendChild(item);
-
-  if(p.pdf){
-    const pdf=document.createElement("a");
-    pdf.className="pdf-link";
-    pdf.href=p.pdf;
-    pdf.target="_blank";
-    pdf.rel="noopener noreferrer";
-    pdf.textContent="📄 Ver ejercicios";
-    wrap.appendChild(pdf);
-  }
-
-  grid.appendChild(wrap);
+ if(p.pdf){
+  const pdf=document.createElement("a");
+  pdf.className="pdf-link";
+  pdf.href=p.pdf;
+  pdf.target="_blank";
+  pdf.rel="noopener noreferrer";
+  pdf.textContent="📄 Ver ejercicios";
+  wrap.appendChild(pdf);
+ }
+ grid.appendChild(wrap);
 });
 
-/* GALERÍA DE IMÁGENES */
 let currentProduct=0;
 let currentIndex=0;
 
 function openGallery(index){
-  currentProduct=index;
-  currentIndex=0;
-
-  document.getElementById("modal-title").textContent=
-    products[index].name;
-
-  updateImage();
-
-  document.getElementById("gallery-modal").style.display="flex";
+ currentProduct=index;
+ currentIndex=0;
+ document.getElementById("modal-title").textContent=products[index].name;
+ updateImage();
+ document.getElementById("gallery-modal").style.display="flex";
 }
 
 function closeGallery(){
-  document.getElementById("gallery-modal").style.display="none";
+ document.getElementById("gallery-modal").style.display="none";
 }
 
 function changeImage(direction){
-  const imgs=products[currentProduct].images;
-
-  currentIndex=
-    (currentIndex+direction+imgs.length)%imgs.length;
-
-  updateImage();
+ const imgs=products[currentProduct].images;
+ currentIndex=(currentIndex+direction+imgs.length)%imgs.length;
+ updateImage();
 }
 
 function updateImage(){
-  const imgs=products[currentProduct].images;
-
-  document.getElementById("modal-img").src=
-    imgs[currentIndex];
-
-  document.getElementById("modal-counter").textContent=
-    (currentIndex+1)+" de "+imgs.length;
+ const imgs=products[currentProduct].images;
+ document.getElementById("modal-img").src=imgs[currentIndex];
+ document.getElementById("modal-counter").textContent=
+  (currentIndex+1)+" de "+imgs.length;
 }
 
-/* CONTROLES DE TECLADO */
 document.addEventListener("keydown",e=>{
-  if(e.key==="Escape"){
-    closeGallery();
-  }
-
-  if(
-    document.getElementById("gallery-modal").style.display
-    ==="flex"
-  ){
-    if(e.key==="ArrowRight"){
-      changeImage(1);
-    }
-    if(e.key==="ArrowLeft"){
-      changeImage(-1);
-    }
-  }
+ if(e.key==="Escape")closeGallery();
+ if(document.getElementById("gallery-modal").style.display==="flex"){
+  if(e.key==="ArrowRight")changeImage(1);
+  if(e.key==="ArrowLeft")changeImage(-1);
+ }
 });
-
 </script>
+
 </body>
 </html>
