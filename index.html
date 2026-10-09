@@ -1,1146 +1,527 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MVP Academy | Baseball Academy & Sports Complex</title>
-<meta name="description" content="Entrenamiento de béisbol, preparación física, rehabilitación deportiva y equipamiento en Tijuana para todas las edades a partir de los 4 años.">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MVP Academy | Halloween Edition</title>
+<meta name="description" content="MVP Baseball Academy & Sports Complex en Tijuana. Entrenamiento, rehabilitación deportiva y tienda.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;600;700;800&display=swap');
-
 :root{
---navy:#061b35;
---navy2:#0c3157;
---red:#d7192e;
---white:#fff;
---light:#f3f5f8;
---line:#d6dee8;
---text:#10243d;
---muted:#65758a
+  --bg:#09050e;
+  --panel:#1a0c24;
+  --purple:#9d4dff;
+  --orange:#ff7300;
+  --line:#58326d;
+  --white:#fff;
 }
-
 *{box-sizing:border-box}
-
-html{
-scroll-behavior:smooth
-}
-
+html{scroll-behavior:smooth}
 body{
-margin:0;
-background-color: #041427;
-color:#fff;
-font-family:Inter,Arial,sans-serif;
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  color:white;
+  background:
+    radial-gradient(circle at 10% 15%,#351047 0%,transparent 28%),
+    radial-gradient(circle at 90% 35%,#401d0b 0%,transparent 25%),
+    #09050e;
 }
-
-a{
-text-decoration:none;
-color:inherit
-}
-
-.container{
-width:min(1180px,92%);
-margin:auto
-}
-
-/* BARRA SUPERIOR */
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
 .top{
-background:#030d1b;
-color:#fff;
-font-size:12px;
-font-weight:800;
-padding:9px 0
+  background:#050208;
+  border-bottom:1px solid #6b347e;
+  padding:10px 0;
+  font-size:12px;
+  font-weight:800;
 }
-
 .top .container{
-display:flex;
-justify-content:space-between;
-gap:10px;
-flex-wrap:wrap
+  display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;
 }
-
-.top a:hover{
-color:#ff6572
+nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(12,5,18,.97);
+  border-bottom:1px solid #71318c;
+  backdrop-filter:blur(12px);
 }
-
-/* NAVBAR */
-.navbar{
-position:sticky;
-top:0;
-z-index:20;
-background:rgba(4,22,43,.97);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #24405e
+.nav-inner{
+  display:flex;align-items:center;
+  gap:20px;min-height:78px;
 }
-
-.nav{
-height:78px;
-display:flex;
-align-items:center;
-gap:16px
-}
-
 .brand{
-display:flex;
-align-items:center;
-gap:12px;
-margin-right:auto;
-color:#fff;
-font:900 24px 'Barlow Condensed';
-letter-spacing:1px;
+  display:flex;align-items:center;gap:12px;
+  margin-right:auto;
+  color:#ff8b29;
+  font:900 26px "Barlow Condensed";
 }
-
 .brand img{
-height:50px;
-width:auto;
-object-fit:contain
+  width:60px;height:60px;object-fit:contain;
 }
-
-.links{
-display:flex;
-gap:18px;
-color:#fff;
-font:800 14px 'Barlow Condensed';
-text-transform:uppercase
-}
-
+.links{display:flex;gap:20px}
 .links a{
-padding:8px 0;
-border-bottom:2px solid transparent
-}
-
-.links a:hover{
-border-color:var(--red)
-}
-
-.socials{
-display:flex;
-gap:7px
-}
-
-.social{
-width:36px;
-height:36px;
-border-radius:50%;
-display:grid;
-place-items:center;
-background:#183653;
-color:#fff
-}
-
-.social:hover{
-background:var(--red)
-}
-
-.social svg{
-width:19px;
-height:19px;
-fill:currentColor
-}
-
-/* HERO */
-.hero{
-background:transparent;
-color:#fff;
-overflow:hidden;
-}
-
-.hero-grid{
-min-height:560px;
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-gap:40px
-}
-
-.hero-copy{
-padding:55px 0
-}
-
-.hero-image-container{
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px
-}
-
-.hero-image-container img{
-max-width:100%;
-height:auto;
-max-height:450px;
-object-fit:contain
-}
-
-.ribbon{
-display:inline-block;
-background:var(--red);
-padding:8px 15px;
-border-radius:4px;
-font:900 17px 'Barlow Condensed';
-text-transform:uppercase
-}
-
-h1{
-font:900 clamp(62px,8vw,105px)/.78 'Barlow Condensed';
-text-transform:uppercase;
-margin:24px 0 18px;
-letter-spacing:-2px
-}
-
-h1 span{
-color: #ffffff;
-text-shadow: none;
-}
-
-h1 small{
-display:block;
-font-size:.43em;
-letter-spacing:4px;
-margin-top:17px
-}
-
-.hero p{
-max-width:600px;
-color:#dce7f4;
-line-height:1.7
-}
-
-.actions{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:25px
-}
-
-.btn{
-padding:13px 19px;
-border-radius:7px;
-font-weight:900;
-border:2px solid transparent
-}
-
-.red{
-background:var(--red);
-color:#fff
-}
-
-.outline{
-border-color:#fff;
-color:#fff
-}
-
-.outline:hover{
-background:#fff;
-color:var(--navy)
-}
-
-/* INFORMACIÓN */
-.info{
-margin-top:-34px;
-position:relative;
-z-index:3
-}
-
-.info-card{
-background:#fff;
-color:var(--text);
-border-radius:14px;
-box-shadow:0 18px 45px rgba(2,17,35,.16);
-display:grid;
-grid-template-columns:repeat(3,1fr);
-overflow:hidden
-}
-
-.info-item{
-display:flex;
-cursor:pointer;
-text-decoration:none;
-color:inherit;
-gap:12px;
-align-items:center;
-padding:20px;
-border-right:1px solid var(--line)
-}
-
-.info-item:last-child{
-border:0
-}
-
-.ico{
-width:44px;
-height:44px;
-border-radius:50%;
-background:#edf3f9;
-color:var(--red);
-display:grid;
-place-items:center;
-font-weight:900;
-flex:0 0 44px
-}
-
-.info small{
-display:block;
-color:var(--muted);
-font-size:10px;
-font-weight:900;
-text-transform:uppercase
-}
-
-.info b{
-display:block;
-font-size:14px;
-margin-top:4px
-}
-
-/* CONTENIDO */
-main{
-padding-bottom:70px
-}
-
-.section{
-padding-top:72px
-}
-
-.head{
-display:flex;
-justify-content:space-between;
-align-items:end;
-gap:20px;
-margin-bottom:24px
-}
-
-.label{
-color:var(--red);
-font-size:12px;
-font-weight:900;
-text-transform:uppercase;
-letter-spacing:1.7px
-}
-
-h2{
-font:900 45px/.95 'Barlow Condensed';
-text-transform:uppercase;
-color:#fff;
-margin:5px 0 0;
-text-shadow:2px 2px 8px rgba(0,0,0,.5)
-}
-
-.head p{
-max-width:560px;
-color:#e0e8f1;
-line-height:1.6;
-margin:0
-}
-
-/* TARJETAS */
-.cards{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px
-}
-
-.card{
-background:#fff;
-color:var(--text);
-border:1px solid var(--line);
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(5,25,48,.07)
-}
-
-.card-title{
-background:linear-gradient(100deg,var(--red),#aa1020);
-color:#fff;
-padding:12px 16px;
-font:900 21px 'Barlow Condensed';
-text-transform:uppercase
-}
-
-.card-body{
-padding:21px
-}
-
-.tag{
-display:inline-block;
-background:#edf3f9;
-color:var(--navy);
-padding:5px 9px;
-border-radius:5px;
-font-size:10px;
-font-weight:900;
-text-transform:uppercase
-}
-
-.card h3{
-font:900 30px/1 'Barlow Condensed';
-text-transform:uppercase;
-margin:9px 0;
-color:var(--navy)
-}
-
-.card p{
-color:var(--muted);
-line-height:1.5
-}
-
-.price{
-font:900 42px 'Barlow Condensed';
-color:var(--red)
-}
-
-/* TABLAS */
-.tables{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px
-}
-
-.panel{
-background:#fff;
-color:var(--text);
-border:1px solid var(--line);
-border-radius:12px;
-overflow:hidden
-}
-
-.panel-title{
-background:var(--navy);
-color:#fff;
-padding:14px 18px;
-font:900 26px 'Barlow Condensed';
-text-transform:uppercase
-}
-
-.row{
-display:grid;
-grid-template-columns:1.05fr 1.45fr .65fr;
-gap:10px;
-align-items:center;
-padding:15px 18px;
-border-bottom:1px solid var(--line)
-}
-
-.row:last-child{
-border:0
-}
-
-.row strong{
-font:900 19px 'Barlow Condensed';
-text-transform:uppercase
-}
-
-.row span{
-font-size:12px;
-color:var(--muted);
-line-height:1.4
-}
-
-.money{
-text-align:right;
-color:var(--red);
-font:900 24px 'Barlow Condensed'
-}
-
-/* PANELES OSCUROS */
-.dark{
-background:linear-gradient(
-120deg,
-rgba(6,27,53,.96),
-rgba(12,49,87,.96)
-);
-border:0
-}
-
-.dark .panel-title{
-background:linear-gradient(100deg,var(--red),#aa1020)
-}
-
-.dark .row{
-border-color:rgba(255,255,255,.13)
-}
-
-.dark .row strong{
-color:#fff
-}
-
-.dark .row span{
-color:#cad7e5
-}
-
-/* SHOP */
-.shop{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-padding:5px 20px 18px;
-gap:0 30px
-}
-
-.shop-item{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:14px 10px;
-border-bottom:1px solid rgba(255,255,255,.13);
-border-radius:6px;
-transition:background-color .2s ease, padding-left .2s ease;
-cursor:pointer
-}
-
-.shop-item:hover{
-background:rgba(255,255,255,.06);
-padding-left:16px
-}
-
-.shop-item b{
-font:800 18px 'Barlow Condensed';
-text-transform:uppercase;
-color:#fff;
-display:flex;
-align-items:center;
-gap:10px
-}
-
-.shop-item b img{
-width:32px;
-height:32px;
-object-fit:cover;
-border-radius:4px;
-display:inline-block;
-flex-shrink:0
-}
-
-.shop-item strong{
-color:#ff5b69;
-font:900 22px 'Barlow Condensed'
-}
-
-
-.shop-product-wrap{
-  display:flex;
-  flex-direction:column;
-  border-bottom:1px solid rgba(255,255,255,.13);
-}
-
-.shop-product-wrap .shop-item{
-  border-bottom:0;
-}
-
-.pdf-link{
-  display:inline-block;
-  margin:0 10px 12px 52px;
-  width:max-content;
-  padding:7px 11px;
-  border-radius:6px;
-  background:#fff;
-  color:var(--navy);
-  font:900 12px 'Barlow Condensed';
+  font:800 16px "Barlow Condensed";
   text-transform:uppercase;
 }
-
-.pdf-link:hover{
-  background:var(--red);
-  color:#fff;
+.links a:hover{color:var(--orange)}
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(120deg,#100617,#281039);
 }
-
-/* MODAL / GALERÍA */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(5px);
-  justify-content: center;
-  align-items: center;
+.hero:before{
+  content:"🦇 🦇";
+  position:absolute;right:15%;top:35px;
+  font-size:32px;opacity:.35;
 }
-
-.modal-content {
-  background: #061b35;
-  border: 1px solid #24405e;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 90%;
-  width: 500px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+.hero-grid{
+  min-height:540px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;align-items:center;
 }
-
-.modal-content h3 {
-  margin-top: 0;
-  font: 900 28px 'Barlow Condensed';
-  color: #fff;
-  text-transform: uppercase;
+.ribbon{
+  display:inline-block;
+  padding:9px 16px;
+  background:linear-gradient(90deg,#ff7800,#b83d00);
+  border-radius:6px;
+  font:900 17px "Barlow Condensed";
 }
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: #fff;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+h1{
+  font:900 clamp(65px,8vw,105px)/.85 "Barlow Condensed";
+  margin:25px 0;
 }
-
-.close-btn:hover {
-  color: #d7192e;
+h1 span{
+  color:#ff831c;
+  text-shadow:0 0 25px #ff730066;
 }
-
-.modal-body {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0;
+h1 small{
+  display:block;
+  font-size:.43em;
+  letter-spacing:4px;
+  margin-top:18px;
+  color:#c68bff;
 }
-
-.modal-body img {
-  max-width: 100%;
-  max-height: 60vh;
-  border-radius: 8px;
-  object-fit: contain;
+.hero p{line-height:1.8;color:#e1d3e9}
+.hero-img{
+  display:flex;align-items:center;
+  justify-content:center;
 }
-
-.nav-btn {
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px 15px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 4px;
-  user-select: none;
+.hero-img img{
+  width:100%;
+  max-height:450px;
+  object-fit:contain;
 }
-
-.nav-btn:hover {
-  background: #d7192e;
+.btn{
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:7px;
+  font-weight:800;
+  margin:8px 8px 8px 0;
 }
-
-.prev-btn { left: 5px; }
-.next-btn { right: 5px; }
-
-.modal-counter {
-  color: #cad7e5;
-  font-size: 14px;
-  font-weight: 600;
+.btn-orange{
+  background:linear-gradient(90deg,#ff7b00,#c94b00);
+  color:white;
 }
-
-/* CONTACTO */
-.contact{
-display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:20px
+.btn-outline{border:2px solid #aa67e9}
+.btn:hover{filter:brightness(1.2)}
+section{padding:65px 0}
+h2{
+  font:900 46px "Barlow Condensed";
+  text-transform:uppercase;
+  margin:5px 0 25px;
 }
-
+.label{
+  color:#ff862a;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.tables{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.panel{
+  background:linear-gradient(140deg,#190b22,#2a1138);
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 12px 35px #0006;
+}
+.panel-title{
+  padding:15px 20px;
+  background:linear-gradient(90deg,#ff7300,#a93800);
+  font:900 26px "Barlow Condensed";
+  text-transform:uppercase;
+}
+.price-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px 15px;
+  padding:17px 20px;
+  border-bottom:1px solid #ffffff20;
+}
+.price-row:last-child{border:0}
+.price-row b{
+  font:900 20px "Barlow Condensed";
+  text-transform:uppercase;
+}
+.price-row span{
+  grid-column:1/-1;
+  grid-row:2;
+  font-size:12px;
+  color:#cdbbd6;
+}
+.money{
+  color:#ff8a22;
+  font:900 25px "Barlow Condensed";
+}
+.shop-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0 20px;
+  padding:12px 20px;
+}
+.product{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 8px;
+  border-bottom:1px solid #ffffff20;
+  cursor:pointer;
+}
+.product:hover{
+  background:#ff730015;
+  border-radius:7px;
+}
+.product-name{
+  display:flex;align-items:center;gap:10px;
+  font:800 19px "Barlow Condensed";
+  text-transform:uppercase;
+}
+.product img{
+  width:38px;height:38px;
+  object-fit:cover;border-radius:5px;
+}
+.product strong{
+  color:#ff8625;
+  font:900 23px "Barlow Condensed";
+}
+.pdf-link{
+  display:inline-block;
+  padding:9px 13px;
+  margin:5px 10px 12px;
+  background:#ff7300;
+  border-radius:6px;
+  font-weight:800;
+  font-size:12px;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:20px;
+}
 .contact-main{
-background:rgba(6,27,53,.96);
-color:#fff;
-border-radius:12px;
-padding:32px
+  background:linear-gradient(130deg,#1a0b25,#351344);
+  padding:30px;border-radius:14px;
+  border:1px solid var(--line);
 }
-
-.contact-main h2{
-color:#fff
-}
-
-.contact-main p{
-color:#cedbeb;
-line-height:1.65
-}
-
-.contact-cards{
-display:grid;
-gap:12px
-}
-
+.contact-main p{line-height:1.7}
+.contact-main a{color:#ff963e}
+.contact-cards{display:grid;gap:12px}
 .contact-card{
-background:#fff;
-cursor:pointer;
-text-decoration:none;
-color:var(--text);
-border:1px solid var(--line);
-border-radius:12px;
-padding:18px
+  display:block;
+  background:#1a0b25;
+  border:1px solid var(--line);
+  padding:20px;border-radius:12px;
 }
-
+.contact-card:hover{border-color:var(--orange)}
 .contact-card small{
-display:block;
-color:var(--muted);
-font-size:10px;
-font-weight:900;
-text-transform:uppercase
+  display:block;
+  color:#b69bc5;
+  margin-bottom:8px;
 }
-
-.contact-card b{
-display:block;
-margin-top:5px
-}
-
-.contact-card:hover{
-border-color:var(--red)
-}
-
-.social-row{
-display:flex;
-gap:10px;
-margin-top:18px
-}
-
-.social-btn{
-display:flex;
-align-items:center;
-gap:8px;
-padding:10px 14px;
-background:#fff;
-color:var(--navy);
-border-radius:7px;
-font-weight:900
-}
-
-.social-btn svg{
-width:19px;
-height:19px;
-fill:currentColor
-}
-
-.whatsapp{
-background:#25d366;
-color:#fff
-}
-
-/* FOOTER */
 footer{
-background:#030e1d;
-color:#b7c6d8;
-padding:38px 0
+  background:#050208;
+  padding:35px 0;
+  border-top:1px solid var(--line);
+  text-align:center;
 }
-
-.footer{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px;
-flex-wrap:wrap
+footer b{
+  font:900 30px "Barlow Condensed";
+  color:#ff8120;
 }
-
-.footer b{
-font:900 30px 'Barlow Condensed';
-color:#fff
+.modal{
+  display:none;
+  position:fixed;inset:0;
+  background:#050208ed;
+  z-index:100;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
-
-.footer-social{
-display:flex;
-gap:9px
+.modal-box{
+  position:relative;
+  width:min(500px,100%);
+  padding:25px;
+  background:#1b0b28;
+  border:1px solid var(--purple);
+  border-radius:14px;
+  text-align:center;
 }
-
-/* RESPONSIVE */
-@media(max-width:950px){
-.links{display:none}
-.hero-grid{grid-template-columns:1fr;text-align:center}
-.hero p{margin:auto}
-.cards,.tables,.contact{grid-template-columns:1fr}
+.modal-box h3{
+  font:900 28px "Barlow Condensed";
+  text-transform:uppercase;
 }
-
-@media(max-width:650px){
-.top .container{justify-content:center;text-align:center}
-.nav{height:68px}
-.hero h1{font-size:67px}
-.info{margin-top:-20px}
-.info-card{grid-template-columns:1fr}
-.info-item{border-right:0;border-bottom:1px solid var(--line)}
-.section{padding-top:55px}
-.head{display:block}
-.head p{margin-top:10px}
-h2{font-size:40px}
-.row{grid-template-columns:1fr auto}
-.row span{grid-column:1/-1}
-.row .money{grid-column:2;grid-row:1}
-.shop{grid-template-columns:1fr}
+.modal-img{
+  width:100%;
+  height:330px;
+  object-fit:contain;
+}
+.modal-controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.modal button{
+  background:#ff7300;color:white;
+  border:0;border-radius:6px;
+  padding:10px 16px;cursor:pointer;
+}
+.close{
+  position:absolute;right:12px;top:12px;
+  font-size:24px;
+}
+@media(max-width:850px){
+  .links{display:none}
+  .hero-grid,.tables,.contact-grid{grid-template-columns:1fr}
+  .hero-grid{text-align:center;padding:45px 0}
+  .hero-img img{max-height:340px}
+}
+@media(max-width:600px){
+  .top .container{justify-content:center;text-align:center}
+  .shop-grid{grid-template-columns:1fr}
+  h2{font-size:39px}
+  h1{font-size:70px}
+  .brand{font-size:22px}
+  .brand img{width:48px;height:48px}
 }
 </style>
 </head>
-
 <body>
 
 <div class="top">
   <div class="container">
-    <span>⚾ CLASES Y PERSONALIZADOS A PARTIR DE LOS 4 AÑOS</span>
+    <span>🎃 MVP HALLOWEEN · CLASES A PARTIR DE LOS 4 AÑOS</span>
     <span>
-      <a href="tel:+526641132878">664 113 2878</a> · 
-      <a href="https://instagram.com/mvpacademy.mx" target="_blank" rel="noopener noreferrer">@mvpacademy.mx</a>
+      <a href="tel:+526641132878">664 113 2878</a> ·
+      <a href="https://instagram.com/mvpacademy.mx">@mvpacademy.mx</a>
     </span>
   </div>
 </div>
 
-<header class="navbar">
-  <div class="container nav">
+<nav>
+  <div class="container nav-inner">
     <a class="brand" href="#inicio">
-      <img src="Gemini_Generated_Image_rfkocdrfkocdrfko-removebg-preview.png" alt="MVP Logo Top">
+      <img src="Emblema_deportivo_de_Halloween_siniestro-removebg-preview.png" alt="Logo MVP Halloween">
       MVP ACADEMY
     </a>
-
-    <nav class="links">
+    <div class="links">
       <a href="#inicio">Inicio</a>
       <a href="#precios">Precios</a>
       <a href="#rehab">Rehab</a>
       <a href="#shop">Shop</a>
       <a href="#contacto">Contacto</a>
-    </nav>
+    </div>
+  </div>
+</nav>
 
-    <div class="socials">
-      <a class="social" href="https://instagram.com/mvpacademy.mx" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <svg viewBox="0 0 24 24">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Z"/>
-        </svg>
-      </a>
-      <a class="social" href="https://wa.me/526641132878" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24">
-          <path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.6 4.1 1.6 5.8L.3 24l6.7-1.7c1.6.9 3.3 1.3 5.1 1.3h.1c6.4 0 11.6-5.2 11.6-11.7 0-3.1-1.2-6.1-3.3-8.4ZM12.1 21.5c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-4 .9 1.1-3.9-.2-.3a9.7 9.7 0 1 1 7.9 4.7Z"/>
-        </svg>
-      </a>
+<header class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <div class="ribbon">🎃 MVP SPORTS COMPLEX · TIJUANA</div>
+      <h1><span>MVP</span><br>BASEBALL<br><small>ACADEMY</small></h1>
+      <p>Entrenamiento de béisbol, preparación física, rehabilitación deportiva y equipamiento para desarrollar tu máximo nivel.</p>
+      <p style="color:#ff963e;font-weight:800">👻 EDICIÓN HALLOWEEN 2026</p>
+      <a class="btn btn-orange" href="https://wa.me/526641132878" target="_blank">WhatsApp</a>
+      <a class="btn btn-outline" href="#precios">Ver precios</a>
+    </div>
+    <div class="hero-img">
+      <!-- IMAGEN GRANDE ORIGINAL: NO MODIFICAR -->
+      <img src="mvp_image-removebg-preview (2).png" alt="MVP Baseball Academy">
     </div>
   </div>
 </header>
 
-<section class="hero" id="inicio">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <div class="ribbon">⚾ MVP SPORTS COMPLEX · TIJUANA</div>
-      <h1>
-        <span>MVP</span><br>
-        BASEBALL<br>
-        <small>ACADEMY</small>
-      </h1>
-      <p>
-        Entrenamiento de béisbol, preparación física, rehabilitación deportiva y equipamiento para desarrollar tu máximo nivel.
-      </p>
-      <div class="actions">
-        <a class="btn red" href="https://wa.me/526641132878" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
-        <a class="btn outline" href="#precios">Ver precios</a>
+<main>
+<section id="precios">
+  <div class="container">
+    <div class="label">Entrenamiento</div>
+    <h2>🎃 Membresías y precios</h2>
+    <div class="tables">
+      <div class="panel">
+        <div class="panel-title">Membresías y paquetes</div>
+        <div class="price-row"><b>Membresía 4x4</b><span>4 sesiones personalizadas + 4 de preparación física</span><div class="money">$3,500</div></div>
+        <div class="price-row"><b>Membresía Básica</b><span>2 sesiones por semana · 4 semanas · 50% bateo / 50% fildeo</span><div class="money">$2,500</div></div>
+        <div class="price-row"><b>Preparación Física</b><span>2 sesiones por semana · 5 semanas + 1 recovery deportivo</span><div class="money">$2,500</div></div>
       </div>
-    </div>
-    
-    <div class="hero-image-container">
-      <img src="mvp_image-removebg-preview (2).png" alt="MVP Imagen Principal Grande">
+      <div class="panel">
+        <div class="panel-title">Sesiones y renta</div>
+        <div class="price-row"><b>Personalizados</b><span>Bateo, pitcheo o catcher · 1 sesión / 4 sesiones</span><div class="money">$650 / $2,200</div></div>
+        <div class="price-row"><b>Clase por Día</b><span>Preparación física, defensiva u ofensiva</span><div class="money">$400</div></div>
+        <div class="price-row"><b>Pruebas Físicas</b><span>Análisis de parámetros personales</span><div class="money">$600</div></div>
+        <div class="price-row"><b>Renta de Jaula</b><span>1 hora · 1–3 personas / 4–10 personas</span><div class="money">$800 / $1,400</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="container info">
-  <div class="info-card">
-    <a class="info-item" href="tel:+526641132878">
-      <div class="ico">☎</div>
-      <div>
-        <small>Teléfono / WhatsApp</small>
-        <b>664 113 2878</b>
+<section id="rehab">
+  <div class="container">
+    <div class="label">Recuperación deportiva</div>
+    <h2>👻 MVP Rehab Center</h2>
+    <div class="panel">
+      <div class="panel-title">Servicios</div>
+      <div class="price-row"><b>Fisioterapia Deportiva</b><span>Consulta general</span><div class="money">$800</div></div>
+      <div class="price-row"><b>Fisioterapia Deportiva</b><span>Recovery deportivo</span><div class="money">$800</div></div>
+      <div class="price-row"><b>Fisioterapia Deportiva</b><span>Suero vitaminado</span><div class="money">$1,800</div></div>
+      <div class="price-row"><b>Médico Deportivo</b><span>Primera consulta</span><div class="money">$1,200</div></div>
+      <div class="price-row"><b>Médico Deportivo</b><span>Reconsulta</span><div class="money">$600</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="container">
+    <div class="label">Equipamiento y ropa</div>
+    <h2>🦇 MVP Shop</h2>
+    <div class="panel">
+      <div class="panel-title">Productos</div>
+      <div class="shop-grid" id="shop-grid"></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-main">
+        <div class="label">Visítanos</div>
+        <h2>🎃 Contacto y ubicación</h2>
+        <p><b>Edades:</b> clases y personalizados a partir de los 4 años.</p>
+        <p><b>Dirección:</b> <a href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank">Callejón San Pedro #14057, Guillén, Tijuana, Baja California 22106</a></p>
+        <p><b>Correo:</b> <a href="mailto:mvp.academy.sc@gmail.com">mvp.academy.sc@gmail.com</a></p>
+        <a class="btn btn-orange" href="https://wa.me/526641132878" target="_blank">WhatsApp</a>
+        <a class="btn btn-outline" href="https://instagram.com/mvpacademy.mx" target="_blank">Instagram</a>
       </div>
-    </a>
-    <a class="info-item" href="https://instagram.com/mvpacademy.mx" target="_blank" rel="noopener noreferrer">
-      <div class="ico">◎</div>
-      <div>
-        <small>Instagram / Usuario</small>
-        <b>@mvpacademy.mx</b>
-      </div>
-    </a>
-    <div class="info-item">
-      <div class="ico">⌖</div>
-      <div>
-        <small>Sucursal 1</small>
-        <b><a href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Callejon San Pedro #14057, Guillen, Tijuana Baja California 22106</a></b>
+      <div class="contact-cards">
+        <a class="contact-card" href="tel:+526641132878"><small>Teléfono / WhatsApp</small><b>664 113 2878</b></a>
+        <a class="contact-card" href="mailto:mvp.academy.sc@gmail.com"><small>Correo electrónico</small><b>mvp.academy.sc@gmail.com</b></a>
+        <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank"><small>Ubicación principal</small><b>Callejón San Pedro #14057, Guillén, Tijuana</b></a>
       </div>
     </div>
   </div>
-</div>
-
-<main>
-<section class="section" id="precios">
-    <div class="container">
-      <div class="head">
-        <div>
-          <div class="label">Entrenamiento</div>
-          <h2>Membresías y precios</h2>
-        </div>
-      </div>
-
-      <div class="tables">
-        <div class="panel">
-          <div class="panel-title">Membresías y paquetes</div>
-          <div class="row">
-            <strong>Membresía 4x4</strong>
-            <span>4 sesiones personalizadas + 4 sesiones de preparación física</span>
-            <div class="money">$3,500</div>
-          </div>
-          <div class="row">
-            <strong>Membresía Básica</strong>
-            <span>2 sesiones x semana · 4 semanas · 50% bateo / 50% fildeo</span>
-            <div class="money">$2,500</div>
-          </div>
-          <div class="row">
-            <strong>Preparación Física</strong>
-            <span>2 sesiones x semana · 5 semanas + 1 Recovery deportivo</span>
-            <div class="money">$2,500</div>
-          </div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-title">Sesiones y renta</div>
-          <div class="row">
-            <strong>Personalizados</strong>
-            <span>Bateo, pitcheo o catcher · 1 sesión / 4 sesiones</span>
-            <div class="money">$650 / $2,200</div>
-          </div>
-          <div class="row">
-            <strong>Clase por Día</strong>
-            <span>Preparación física, defensiva u ofensiva</span>
-            <div class="money">$400</div>
-          </div>
-          <div class="row">
-            <strong>Pruebas Físicas</strong>
-            <span>Análisis de parámetros personales</span>
-            <div class="money">$600</div>
-          </div>
-          <div class="row">
-            <strong>Renta de Jaula</strong>
-            <span>1 hora · 1–3 personas / 4–10 personas</span>
-            <div class="money">$800 / $1,400</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="rehab">
-    <div class="container">
-      <div class="head">
-        <div>
-          <div class="label">Recuperación deportiva</div>
-          <h2>MVP Rehab Center</h2>
-        </div>
-        <p>Centro de rehabilitación con fisioterapia deportiva y médico deportivo.</p>
-      </div>
-
-      <div class="panel dark">
-        <div class="panel-title">Servicios</div>
-
-        <div class="row">
-          <strong>Fisioterapia Deportiva</strong>
-          <span>Consulta general</span>
-          <div class="money">$800</div>
-        </div>
-
-        <div class="row">
-          <strong>Fisioterapia Deportiva</strong>
-          <span>Recovery deportivo</span>
-          <div class="money">$800</div>
-        </div>
-
-        <div class="row">
-          <strong>Fisioterapia Deportiva</strong>
-          <span>Suero vitaminado</span>
-          <div class="money">$1,800</div>
-        </div>
-
-        <div class="row">
-          <strong>Médico Deportivo</strong>
-          <span>Primera consulta</span>
-          <div class="money">$1,200</div>
-        </div>
-
-        <div class="row">
-          <strong>Médico Deportivo</strong>
-          <span>Reconsulta</span>
-          <div class="money">$600</div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-<section class="section" id="shop">
-    <div class="container">
-      <div class="head">
-        <div>
-          <div class="label">Equipamiento y ropa</div>
-          <h2>MVP Shop</h2>
-        </div>
-      </div>
-
-      <div class="panel dark">
-        <div class="panel-title">Productos</div>
-        <div class="shop">
-
-          <a href="#" class="shop-item" onclick="openGallery('Camiseta', ['camiseta negra de mvp.jpg', 'camiseta roja de mvp.jpg']); return false;">
-            <b><img src="camiseta negra de mvp.jpg" alt="Camiseta"> Camiseta</b>
-            <strong>$400</strong>
-          </a>
-
-          <a href="#" class="shop-item" onclick="openGallery('Bat', ['bat mvp amarillo.jpg', 'bat mvp azul.jpg', 'bat mvp color madera normal con cafe.jpg', 'bat mvp madera normal.jpg', 'bat mvp negro.jpg', 'bat mvp rojo con negro diferente modelo.jpg', 'bat mvp rojo con negro en diferente pose.jpg', 'bat mvp rojo con negro.jpg', 'bat mvp rosa con azul pose diferente.jpg', 'bat mvp rosa con azul.jpg']); return false;">
-            <b><img src="bat mvp amarillo.jpg" alt="Bat"> Bat</b>
-            <strong>$1,500</strong>
-          </a>
-
-          <a href="#" class="shop-item" onclick="openGallery('Sudadera', ['sudadera de mvp.jpg']); return false;">
-            <b><img src="sudadera de mvp.jpg" alt="Sudadera"> Sudadera</b>
-            <strong>$700</strong>
-          </a>
-
-          <div class="shop-product-wrap">
-            <a href="#" class="shop-item" onclick="openGallery('Ligas de Resistencia', ['liga_de_resistencia-removebg-preview (2).png', 'resistencia.jpeg']); return false;">
-              <b><img src="liga_de_resistencia-removebg-preview (2).png" alt="Ligas de Resistencia"> Ligas de Resistencia</b>
-              <strong>$500</strong>
-            </a>
-            <a class="pdf-link" href="Tarjeton de shoulder kit (11 x 15 cm).pdf" target="_blank" rel="noopener noreferrer">📄 Ver ejercicios</a>
-          </div>
-
-          <a href="#" class="shop-item" onclick="openGallery('Gorra', ['gorra de mvp.jpg', 'gorra de mvp 2.jpg']); return false;">
-            <b><img src="gorra de mvp.jpg" alt="Gorra"> Gorra</b>
-            <strong>$500</strong>
-          </a>
-
-          <a href="#" class="shop-item" onclick="openGallery('Gorro', ['gorro de mvp.jpg']); return false;">
-            <b><img src="gorro de mvp.jpg" alt="Gorro"> Gorro</b>
-            <strong>$400</strong>
-          </a>
-
-          <a href="#" class="shop-item" onclick="openGallery('Guante', ['guante de mvp negro con color piel.jpg', 'guante de mvp negro.jpg', 'guante de mvp negroo.jpg', 'guante de mvp negrooo.jpg', 'guante de mvp torta foto 2.jpg', 'guante de mvp torta.jpg']); return false;">
-            <b><img src="guante de mvp negro.jpg" alt="Guante"> Guante</b>
-            <strong>$2,000</strong>
-          </a>
-
-          <a href="#" class="shop-item" onclick="openGallery('Guanteletas', ['guanteletas mvp azul muy oscuro.jpg', 'guanteletas mvp blancas.jpg', 'guanteletas mvp blanco con rojo y azul oscuro.jpg', 'guanteletas mvp negras con amarillo.jpg', 'guanteletas mvp negras.jpg', 'guanteletas mvp negro con blanco.jpg', 'guanteletas mvp rojo.jpg']); return false;">
-            <b><img src="guanteletas mvp azul muy oscuro.jpg" alt="Guanteletas"> Guanteletas</b>
-            <strong>$700</strong>
-          </a>
-
-          <a href="#" class="shop-item" onclick="openGallery('Deslizadores', ['deslisadores mvp azul con rosa.jpg', 'deslisadores mvp blanca.jpg', 'deslisadores mvp de mario y luigi.jpg']); return false;">
-            <b><img src="deslisadores mvp azul con rosa.jpg" alt="Deslizadores"> Deslizadores</b>
-            <strong>$700</strong>
-          </a>
-
-          <a href="#" class="shop-item" onclick="openGallery('Lentes MVP', ['lentes mvp  blanco.jpg', 'lentes mvp  naranja.jpg', 'lentes mvp  negro no tan negro.jpg', 'lentes mvp azul.jpg', 'lentes mvp negro completo.jpg', 'lentes mvp verde.jpg']); return false;">
-            <b><img src="lentes mvp  blanco.jpg" alt="Lentes"> Lentes</b>
-            <strong>$500</strong>
-          </a>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contacto">
-    <div class="container">
-      <div class="contact">
-        <div class="contact-main">
-          <div class="label" style="color:#ff5968">Visítanos</div>
-          <h2>Contacto y ubicación</h2>
-          <p><b>Edades:</b> clases y personalizados a partir de los 4 años.</p>
-          <p><b>Dirección:</b> <a href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank" rel="noopener noreferrer" style="color:#ff5968;text-decoration:underline;">Callejon San Pedro #14057, Guillen, Tijuana Baja California 22106</a>.</p>
-          <p><b>Correo electrónico:</b> <a href="mailto:mvp.academy.sc@gmail.com" style="color:#ff5968; text-decoration:underline;">mvp.academy.sc@gmail.com</a></p>
-<div class="social-row">
-            <a class="social-btn whatsapp" href="https://wa.me/526641132878" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a class="social-btn" href="https://instagram.com/mvpacademy.mx" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-        </div>
-
-        <div class="contact-cards">
-          <a class="contact-card" href="tel:+526641132878">
-            <small>Teléfono / WhatsApp</small>
-            <b>664 113 2878</b>
-          </a>
-          <a class="contact-card" href="mailto:mvp.academy.sc@gmail.com">
-            <small>Correo electrónico</small>
-            <b>mvp.academy.sc@gmail.com</b>
-          </a>
-          <a class="contact-card" href="https://www.google.com/maps/search/?api=1&query=Callejon+San+Pedro+%2314057%2C+Guillen%2C+Tijuana+Baja+California+22106" target="_blank" rel="noopener noreferrer">
-            <small>Ubicación principal</small>
-            <b>Callejon San Pedro #14057, Guillen, Tijuana Baja California 22106</b>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+</section>
 </main>
 
-<!-- Modal / Visor de Galería -->
-<div id="gallery-modal" class="modal" onclick="closeGallery(event)">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <span class="close-btn" onclick="closeGallery()">&times;</span>
+<div class="modal" id="gallery-modal" onclick="closeGallery(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="close" onclick="closeGallery()">×</button>
     <h3 id="modal-title"></h3>
-    <div class="modal-body">
-      <button class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</button>
-      <img id="modal-img" src="" alt="Producto MVP">
-      <button class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</button>
+    <img class="modal-img" id="modal-img" alt="Producto MVP">
+    <div class="modal-controls">
+      <button onclick="changeImage(-1)">❮</button>
+      <span id="modal-counter"></span>
+      <button onclick="changeImage(1)">❯</button>
     </div>
-    <div id="modal-counter" class="modal-counter"></div>
   </div>
 </div>
 
 <footer>
-  <div class="container footer">
-    <div>
-      <b>MVP BASEBALL ACADEMY</b>
-      <div>Más que un entrenamiento, formamos campeones.</div>
-    </div>
-
-    <div class="footer-social">
-      <a class="social" href="https://instagram.com/mvpacademy.mx" target="_blank" rel="noopener noreferrer">IG</a>
-      <a class="social" href="https://wa.me/526641132878" target="_blank" rel="noopener noreferrer">WA</a>
-    </div>
+  <div class="container">
+    <b>MVP BASEBALL ACADEMY</b>
+    <p>Más que un entrenamiento, formamos campeones.</p>
+    <p>🎃 HALLOWEEN EDITION · MVP SPORTS COMPLEX</p>
   </div>
 </footer>
 
 <script>
-let currentImages = [];
-let currentIndex = 0;
+const products = [
+  {name:"Camiseta",price:"$400",images:["camiseta negra de mvp.jpg","camiseta roja de mvp.jpg"]},
+  {name:"Bat",price:"$1,500",images:["bat mvp amarillo.jpg","bat mvp azul.jpg","bat mvp color madera normal con cafe.jpg","bat mvp madera normal.jpg","bat mvp negro.jpg","bat mvp rojo con negro diferente modelo.jpg","bat mvp rojo con negro en diferente pose.jpg","bat mvp rojo con negro.jpg","bat mvp rosa con azul pose diferente.jpg","bat mvp rosa con azul.jpg"]},
+  {name:"Sudadera",price:"$700",images:["sudadera de mvp.jpg"]},
+  {name:"Ligas de Resistencia",price:"$500",images:["liga_de_resistencia-removebg-preview (2).png","resistencia.jpeg"],pdf:"Tarjeton de shoulder kit (11 x 15 cm).pdf"},
+  {name:"Gorra",price:"$500",images:["gorra de mvp.jpg","gorra de mvp 2.jpg"]},
+  {name:"Gorro",price:"$400",images:["gorro de mvp.jpg"]},
+  {name:"Guante",price:"$2,000",images:["guante de mvp negro con color piel.jpg","guante de mvp negro.jpg","guante de mvp negroo.jpg","guante de mvp negrooo.jpg","guante de mvp torta foto 2.jpg","guante de mvp torta.jpg"]},
+  {name:"Guanteletas",price:"$700",images:["guanteletas mvp azul muy oscuro.jpg","guanteletas mvp blancas.jpg","guanteletas mvp blanco con rojo y azul oscuro.jpg","guanteletas mvp negras con amarillo.jpg","guanteletas mvp negras.jpg","guanteletas mvp negro con blanco.jpg","guanteletas mvp rojo.jpg"]},
+  {name:"Deslizadores",price:"$700",images:["deslisadores mvp azul con rosa.jpg","deslisadores mvp blanca.jpg","deslisadores mvp de mario y luigi.jpg"]},
+  {name:"Lentes MVP",price:"$500",images:["lentes mvp  blanco.jpg","lentes mvp  naranja.jpg","lentes mvp  negro no tan negro.jpg","lentes mvp azul.jpg","lentes mvp negro completo.jpg","lentes mvp verde.jpg"]}
+];
 
-function openGallery(title, images) {
-  currentImages = images;
-  currentIndex = 0;
-  document.getElementById('modal-title').innerText = title;
-  updateModalImage();
-  document.getElementById('gallery-modal').style.display = 'flex';
-}
-
-function closeGallery() {
-  document.getElementById('gallery-modal').style.display = 'none';
-}
-
-function changeImage(direction) {
-  currentIndex += direction;
-  if (currentIndex < 0) {
-    currentIndex = currentImages.length - 1;
-  } else if (currentIndex >= currentImages.length) {
-    currentIndex = 0;
+const grid=document.getElementById("shop-grid");
+products.forEach((p,i)=>{
+  const wrap=document.createElement("div");
+  const item=document.createElement("div");
+  item.className="product";
+  const name=document.createElement("div");
+  name.className="product-name";
+  const img=document.createElement("img");
+  img.src=p.images[0];
+  img.alt=p.name;
+  const label=document.createElement("span");
+  label.textContent=p.name;
+  name.append(img,label);
+  const price=document.createElement("strong");
+  price.textContent=p.price;
+  item.append(name,price);
+  item.onclick=()=>openGallery(i);
+  wrap.appendChild(item);
+  if(p.pdf){
+    const pdf=document.createElement("a");
+    pdf.className="pdf-link";
+    pdf.href=p.pdf;
+    pdf.target="_blank";
+    pdf.rel="noopener noreferrer";
+    pdf.textContent="📄 Ver ejercicios";
+    wrap.appendChild(pdf);
   }
-  updateModalImage();
+  grid.appendChild(wrap);
+});
+
+let currentProduct=0,currentIndex=0;
+function openGallery(index){
+  currentProduct=index;
+  currentIndex=0;
+  document.getElementById("modal-title").textContent=products[index].name;
+  updateImage();
+  document.getElementById("gallery-modal").style.display="flex";
 }
-
-function updateModalImage() {
-  const imgElement = document.getElementById('modal-img');
-  const counterElement = document.getElementById('modal-counter');
-  
-  imgElement.src = currentImages[currentIndex];
-  counterElement.innerText = `${currentIndex + 1} de ${currentImages.length}`;
-
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-
-  if (currentImages.length <= 1) {
-    prevBtn.style.display = 'none';
-    nextBtn.style.display = 'none';
-  } else {
-    prevBtn.style.display = 'block';
-    nextBtn.style.display = 'block';
+function closeGallery(){
+  document.getElementById("gallery-modal").style.display="none";
+}
+function changeImage(direction){
+  const imgs=products[currentProduct].images;
+  currentIndex=(currentIndex+direction+imgs.length)%imgs.length;
+  updateImage();
+}
+function updateImage(){
+  const imgs=products[currentProduct].images;
+  document.getElementById("modal-img").src=imgs[currentIndex];
+  document.getElementById("modal-counter").textContent=(currentIndex+1)+" de "+imgs.length;
+}
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape")closeGallery();
+  if(document.getElementById("gallery-modal").style.display==="flex"){
+    if(e.key==="ArrowRight")changeImage(1);
+    if(e.key==="ArrowLeft")changeImage(-1);
   }
-}
+});
 </script>
-
 </body>
 </html>
